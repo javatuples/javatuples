@@ -410,6 +410,45 @@ public final class Septet<A,B,C,D,E,F,G> extends Tuple {
         return insertInPos7(tuple);
     }
     
+
+    
+    
+    
+    
+    public <X> Septet<X,B,C,D,E,F,G> setInPos0(final X value) {
+        return new Septet<X,B,C,D,E,F,G>(
+                value, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6);
+    }
+    
+    public <X> Septet<A,X,C,D,E,F,G> setInPos1(final X value) {
+        return new Septet<A,X,C,D,E,F,G>(
+                this.val0, value, this.val2, this.val3, this.val4, this.val5, this.val6);
+    }
+    
+    public <X> Septet<A,B,X,D,E,F,G> setInPos2(final X value) {
+        return new Septet<A,B,X,D,E,F,G>(
+                this.val0, this.val1, value, this.val3, this.val4, this.val5, this.val6);
+    }
+    
+    public <X> Septet<A,B,C,X,E,F,G> setInPos3(final X value) {
+        return new Septet<A,B,C,X,E,F,G>(
+                this.val0, this.val1, this.val2, value, this.val4, this.val5, this.val6);
+    }
+    
+    public <X> Septet<A,B,C,D,X,F,G> setInPos4(final X value) {
+        return new Septet<A,B,C,D,X,F,G>(
+                this.val0, this.val1, this.val2, this.val3, value, this.val5, this.val6);
+    }
+    
+    public <X> Septet<A,B,C,D,E,X,G> setInPos5(final X value) {
+        return new Septet<A,B,C,D,E,X,G>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, value, this.val6);
+    }
+    
+    public <X> Septet<A,B,C,D,E,F,X> setInPos6(final X value) {
+        return new Septet<A,B,C,D,E,F,X>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, value);
+    }
     
     
 }

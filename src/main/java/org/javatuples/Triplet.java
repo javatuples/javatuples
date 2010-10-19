@@ -498,4 +498,26 @@ public final class Triplet<A,B,C> extends Tuple {
 
     
     
+    
+    
+    
+    
+    
+    public <X> Triplet<X,B,C> setInPos0(final X value) {
+        return new Triplet<X,B,C>(
+                value, this.val1, this.val2);
+    }
+    
+    public <X> Triplet<A,X,C> setInPos1(final X value) {
+        return new Triplet<A,X,C>(
+                this.val0, value, this.val2);
+    }
+    
+    public <X> Triplet<A,B,X> setInPos2(final X value) {
+        return new Triplet<A,B,X>(
+                this.val0, this.val1, value);
+    }
+    
+    
+    
 }

@@ -444,4 +444,19 @@ public final class Unit<A> extends Tuple {
     }
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    public <X> Unit<X> setInPos0(final X value) {
+        return new Unit<X>(
+                value);
+    }
+    
+    
+    
 }

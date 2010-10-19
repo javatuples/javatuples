@@ -445,6 +445,42 @@ public final class Sextet<A,B,C,D,E,F> extends Tuple {
     }
     
     
+
+    
+    
+    
+    
+    
+    public <X> Sextet<X,B,C,D,E,F> setInPos0(final X value) {
+        return new Sextet<X,B,C,D,E,F>(
+                value, this.val1, this.val2, this.val3, this.val4, this.val5);
+    }
+    
+    public <X> Sextet<A,X,C,D,E,F> setInPos1(final X value) {
+        return new Sextet<A,X,C,D,E,F>(
+                this.val0, value, this.val2, this.val3, this.val4, this.val5);
+    }
+    
+    public <X> Sextet<A,B,X,D,E,F> setInPos2(final X value) {
+        return new Sextet<A,B,X,D,E,F>(
+                this.val0, this.val1, value, this.val3, this.val4, this.val5);
+    }
+    
+    public <X> Sextet<A,B,C,X,E,F> setInPos3(final X value) {
+        return new Sextet<A,B,C,X,E,F>(
+                this.val0, this.val1, this.val2, value, this.val4, this.val5);
+    }
+    
+    public <X> Sextet<A,B,C,D,X,F> setInPos4(final X value) {
+        return new Sextet<A,B,C,D,X,F>(
+                this.val0, this.val1, this.val2, this.val3, value, this.val5);
+    }
+    
+    public <X> Sextet<A,B,C,D,E,X> setInPos5(final X value) {
+        return new Sextet<A,B,C,D,E,X>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, value);
+    }
+    
     
     
 }

@@ -333,4 +333,49 @@ public final class Octet<A,B,C,D,E,F,G,H> extends Tuple {
     }
     
     
+    
+    
+    
+    
+    public <X> Octet<X,B,C,D,E,F,G,H> setInPos0(final X value) {
+        return new Octet<X,B,C,D,E,F,G,H>(
+                value, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7);
+    }
+    
+    public <X> Octet<A,X,C,D,E,F,G,H> setInPos1(final X value) {
+        return new Octet<A,X,C,D,E,F,G,H>(
+                this.val0, value, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7);
+    }
+    
+    public <X> Octet<A,B,X,D,E,F,G,H> setInPos2(final X value) {
+        return new Octet<A,B,X,D,E,F,G,H>(
+                this.val0, this.val1, value, this.val3, this.val4, this.val5, this.val6, this.val7);
+    }
+    
+    public <X> Octet<A,B,C,X,E,F,G,H> setInPos3(final X value) {
+        return new Octet<A,B,C,X,E,F,G,H>(
+                this.val0, this.val1, this.val2, value, this.val4, this.val5, this.val6, this.val7);
+    }
+    
+    public <X> Octet<A,B,C,D,X,F,G,H> setInPos4(final X value) {
+        return new Octet<A,B,C,D,X,F,G,H>(
+                this.val0, this.val1, this.val2, this.val3, value, this.val5, this.val6, this.val7);
+    }
+    
+    public <X> Octet<A,B,C,D,E,X,G,H> setInPos5(final X value) {
+        return new Octet<A,B,C,D,E,X,G,H>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, value, this.val6, this.val7);
+    }
+    
+    public <X> Octet<A,B,C,D,E,F,X,H> setInPos6(final X value) {
+        return new Octet<A,B,C,D,E,F,X,H>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, value, this.val7);
+    }
+    
+    public <X> Octet<A,B,C,D,E,F,G,X> setInPos7(final X value) {
+        return new Octet<A,B,C,D,E,F,G,X>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, value);
+    }
+    
+    
 }

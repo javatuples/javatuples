@@ -484,4 +484,21 @@ public final class Pair<A,B> extends Tuple {
     
     
     
+    
+    
+    
+    
+    
+    
+    public <X> Pair<X,B> setInPos0(final X value) {
+        return new Pair<X,B>(
+                value, this.val1);
+    }
+    
+    public <X> Pair<A,X> setInPos1(final X value) {
+        return new Pair<A,X>(
+                this.val0, value);
+    }
+    
+    
 }

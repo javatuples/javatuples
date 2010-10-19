@@ -122,4 +122,57 @@ public final class Decade<A,B,C,D,E,F,G,H,I,J> extends Tuple {
         return SIZE;
     }
     
+    
+    
+    public <X> Decade<X,B,C,D,E,F,G,H,I,J> setInPos0(final X value) {
+        return new Decade<X,B,C,D,E,F,G,H,I,J>(
+                value, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public <X> Decade<A,X,C,D,E,F,G,H,I,J> setInPos1(final X value) {
+        return new Decade<A,X,C,D,E,F,G,H,I,J>(
+                this.val0, value, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public <X> Decade<A,B,X,D,E,F,G,H,I,J> setInPos2(final X value) {
+        return new Decade<A,B,X,D,E,F,G,H,I,J>(
+                this.val0, this.val1, value, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public <X> Decade<A,B,C,X,E,F,G,H,I,J> setInPos3(final X value) {
+        return new Decade<A,B,C,X,E,F,G,H,I,J>(
+                this.val0, this.val1, this.val2, value, this.val4, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public <X> Decade<A,B,C,D,X,F,G,H,I,J> setInPos4(final X value) {
+        return new Decade<A,B,C,D,X,F,G,H,I,J>(
+                this.val0, this.val1, this.val2, this.val3, value, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public <X> Decade<A,B,C,D,E,X,G,H,I,J> setInPos5(final X value) {
+        return new Decade<A,B,C,D,E,X,G,H,I,J>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, value, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public <X> Decade<A,B,C,D,E,F,X,H,I,J> setInPos6(final X value) {
+        return new Decade<A,B,C,D,E,F,X,H,I,J>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, value, this.val7, this.val8, this.val9);
+    }
+    
+    public <X> Decade<A,B,C,D,E,F,G,X,I,J> setInPos7(final X value) {
+        return new Decade<A,B,C,D,E,F,G,X,I,J>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, value, this.val8, this.val9);
+    }
+    
+    public <X> Decade<A,B,C,D,E,F,G,H,X,J> setInPos8(final X value) {
+        return new Decade<A,B,C,D,E,F,G,H,X,J>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, value, this.val9);
+    }
+    
+    public <X> Decade<A,B,C,D,E,F,G,H,I,X> setInPos9(final X value) {
+        return new Decade<A,B,C,D,E,F,G,H,I,X>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8, value);
+    }
+    
+    
 }

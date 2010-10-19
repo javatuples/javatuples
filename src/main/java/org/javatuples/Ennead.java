@@ -233,4 +233,53 @@ public final class Ennead<A,B,C,D,E,F,G,H,I> extends Tuple {
     }
     
     
+    
+    
+    
+    public <X> Ennead<X,B,C,D,E,F,G,H,I> setInPos0(final X value) {
+        return new Ennead<X,B,C,D,E,F,G,H,I>(
+                value, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public <X> Ennead<A,X,C,D,E,F,G,H,I> setInPos1(final X value) {
+        return new Ennead<A,X,C,D,E,F,G,H,I>(
+                this.val0, value, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public <X> Ennead<A,B,X,D,E,F,G,H,I> setInPos2(final X value) {
+        return new Ennead<A,B,X,D,E,F,G,H,I>(
+                this.val0, this.val1, value, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public <X> Ennead<A,B,C,X,E,F,G,H,I> setInPos3(final X value) {
+        return new Ennead<A,B,C,X,E,F,G,H,I>(
+                this.val0, this.val1, this.val2, value, this.val4, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public <X> Ennead<A,B,C,D,X,F,G,H,I> setInPos4(final X value) {
+        return new Ennead<A,B,C,D,X,F,G,H,I>(
+                this.val0, this.val1, this.val2, this.val3, value, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public <X> Ennead<A,B,C,D,E,X,G,H,I> setInPos5(final X value) {
+        return new Ennead<A,B,C,D,E,X,G,H,I>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, value, this.val6, this.val7, this.val8);
+    }
+    
+    public <X> Ennead<A,B,C,D,E,F,X,H,I> setInPos6(final X value) {
+        return new Ennead<A,B,C,D,E,F,X,H,I>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, value, this.val7, this.val8);
+    }
+    
+    public <X> Ennead<A,B,C,D,E,F,G,X,I> setInPos7(final X value) {
+        return new Ennead<A,B,C,D,E,F,G,X,I>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, value, this.val8);
+    }
+    
+    public <X> Ennead<A,B,C,D,E,F,G,H,X> setInPos8(final X value) {
+        return new Ennead<A,B,C,D,E,F,G,H,X>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, value);
+    }
+    
+    
 }

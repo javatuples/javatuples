@@ -479,4 +479,34 @@ public final class Quintet<A,B,C,D,E> extends Tuple {
     }
     
     
+    
+    
+    
+    
+    public <X> Quintet<X,B,C,D,E> setInPos0(final X value) {
+        return new Quintet<X,B,C,D,E>(
+                value, this.val1, this.val2, this.val3, this.val4);
+    }
+    
+    public <X> Quintet<A,X,C,D,E> setInPos1(final X value) {
+        return new Quintet<A,X,C,D,E>(
+                this.val0, value, this.val2, this.val3, this.val4);
+    }
+    
+    public <X> Quintet<A,B,X,D,E> setInPos2(final X value) {
+        return new Quintet<A,B,X,D,E>(
+                this.val0, this.val1, value, this.val3, this.val4);
+    }
+    
+    public <X> Quintet<A,B,C,X,E> setInPos3(final X value) {
+        return new Quintet<A,B,C,X,E>(
+                this.val0, this.val1, this.val2, value, this.val4);
+    }
+    
+    public <X> Quintet<A,B,C,D,X> setInPos4(final X value) {
+        return new Quintet<A,B,C,D,X>(
+                this.val0, this.val1, this.val2, this.val3, value);
+    }
+    
+    
 }

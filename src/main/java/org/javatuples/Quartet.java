@@ -497,4 +497,30 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
+    
+    
+    
+    
+    
+    public <X> Quartet<X,B,C,D> setInPos0(final X value) {
+        return new Quartet<X,B,C,D>(
+                value, this.val1, this.val2, this.val3);
+    }
+    
+    public <X> Quartet<A,X,C,D> setInPos1(final X value) {
+        return new Quartet<A,X,C,D>(
+                this.val0, value, this.val2, this.val3);
+    }
+    
+    public <X> Quartet<A,B,X,D> setInPos2(final X value) {
+        return new Quartet<A,B,X,D>(
+                this.val0, this.val1, value, this.val3);
+    }
+    
+    public <X> Quartet<A,B,C,X> setInPos3(final X value) {
+        return new Quartet<A,B,C,X>(
+                this.val0, this.val1, this.val2, value);
+    }
+    
+    
 }
