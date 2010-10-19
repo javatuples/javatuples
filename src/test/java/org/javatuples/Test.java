@@ -1,3 +1,22 @@
+/*
+ * =============================================================================
+ * 
+ *   Copyright (c) 2010, The JAVATUPLES team (http://www.javatuples.org)
+ * 
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ * 
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ * 
+ * =============================================================================
+ */
 package org.javatuples;
 
 import java.net.Socket;
@@ -33,8 +52,6 @@ public class Test extends TestCase {
         System.out.println(sextet);
         System.out.println(sextet.insertInPos3("Perico"));
         
-        System.out.println(Tuple.with("a").append(Integer.valueOf(2)).append(4.09));
-        System.out.println(Tuple.with("a").append(Integer.valueOf(2)).append(4.09).contains(2));
     }
     
 }
