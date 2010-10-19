@@ -52,6 +52,16 @@ public class Test extends TestCase {
         System.out.println(sextet);
         System.out.println(sextet.insertInPos3("Perico"));
         
+        Pair<String,Object> pair = Pair.with("a", null);
+        
+        final Object o = null;
+        assertTrue(pair.contains("a"));
+        assertTrue(pair.contains(null));
+        assertTrue(pair.containsAll(o));
+        assertTrue(pair.containsAll(null,"a"));
+        assertTrue(!pair.containsAll(null,"b"));
+        
+        
     }
     
 }

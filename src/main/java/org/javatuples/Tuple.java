@@ -21,6 +21,7 @@ package org.javatuples;
 
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -108,11 +109,70 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
         }
         return false;
     }
+    
+    
+    public final boolean containsAll(final Collection<?> collection) {
+        for (final Object value : collection) {
+            if (!contains(value)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    
+    public final boolean containsAll(final Object... values) {
+        if (values == null) {
+            throw new IllegalArgumentException("Values array cannot be null");
+        }
+        for (final Object value : values) {
+            if (!contains(value)) {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    
+    
+    public final int indexOf(final Object value) {
+        int i = 0;
+        for (final Object val : this.valueList) {
+            if (val == null) {
+                if (value == null) {
+                    return i;
+                }
+            } else {
+                if (val.equals(value)) {
+                    return i;
+                }
+            }
+            i++;
+        }
+        return -1;
+    }
+    
+    
+    public final int lastIndexOf(final Object value) {
+        for (int i = getSize() - 1; i >= 0; i--) {
+            final Object val = this.valueList.get(i);
+            if (val == null) {
+                if (value == null) {
+                    return i;
+                }
+            } else {
+                if (val.equals(value)) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+    
 
 
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         final int prime = 31;
         int result = 1;
         result = prime * result
@@ -123,7 +183,7 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
 
 
     @Override
-    public boolean equals(final Object obj) {
+    public final boolean equals(final Object obj) {
         if (this == obj) {
             return true;
         }
