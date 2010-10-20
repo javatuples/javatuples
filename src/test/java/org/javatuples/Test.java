@@ -20,8 +20,12 @@
 package org.javatuples;
 
 import java.net.Socket;
+import java.util.Arrays;
 
 import junit.framework.TestCase;
+
+import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang.SerializationUtils;
 
 public class Test extends TestCase {
 
@@ -60,6 +64,12 @@ public class Test extends TestCase {
         assertTrue(pair.containsAll(o));
         assertTrue(pair.containsAll(null,"a"));
         assertTrue(!pair.containsAll(null,"b"));
+        
+        final byte[] serSextet = SerializationUtils.serialize(sextet);
+        System.out.println(Arrays.asList(ArrayUtils.toObject(serSextet)));
+        final Sextet<String,Integer,String,String,String,String> sextetUnSer =
+            (Sextet<String,Integer,String,String,String,String>) SerializationUtils.deserialize(serSextet);
+        System.out.println(sextetUnSer);
         
         
     }

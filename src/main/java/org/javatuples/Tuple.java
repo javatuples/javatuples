@@ -20,8 +20,10 @@
 package org.javatuples;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -29,6 +31,7 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
 
     private static final long serialVersionUID = 5431085632328343101L;
     
+    private final Object[] valueArray;
     private final List<Object> valueList;
     
     
@@ -76,6 +79,7 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
     
     public Tuple(final int size, final Object... values) {
         super();
+        this.valueArray = values;
         this.valueList = Arrays.asList(values);
     }
     
@@ -170,6 +174,20 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
     }
     
 
+    
+    
+    
+    public final List<Object> toList() {
+        return Collections.unmodifiableList(new ArrayList<Object>(this.valueList));
+    }
+    
+    
+    
+    public final Object[] toArray() {
+        return this.valueArray.clone();
+    }
+    
+    
 
     @Override
     public final int hashCode() {
