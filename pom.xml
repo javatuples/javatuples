@@ -43,6 +43,12 @@
     <url>http://www.javatuples.org</url>
   </organization>
   
+  <scm>
+    <url>scm:svn:http://java-tuples.svn.sourceforge.net/svnroot/java-tuples/trunk/javatuples</url>
+    <connection>scm:svn:https://java-tuples.svn.sourceforge.net/svnroot/java-tuples/trunk/javatuples</connection>
+    <developerConnection>scm:svn:https://java-tuples.svn.sourceforge.net/svnroot/java-tuples/trunk/javatuples</developerConnection>
+  </scm>
+  
   <developers>
     <developer>
       <id>dfernandez</id>
