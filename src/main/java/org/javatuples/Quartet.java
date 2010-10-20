@@ -523,4 +523,34 @@ public final class Quartet<A,B,C,D> extends Tuple {
     }
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public Triplet<B,C,D> removeFrom0() {
+        return new Triplet<B,C,D>(
+                this.val1, this.val2, this.val3);
+    }
+    
+    public Triplet<A,C,D> removeFrom1() {
+        return new Triplet<A,C,D>(
+                this.val0, this.val2, this.val3);
+    }
+    
+    public Triplet<A,B,D> removeFrom2() {
+        return new Triplet<A,B,D>(
+                this.val0, this.val1, this.val3);
+    }
+    
+    public Triplet<A,B,C> removeFrom3() {
+        return new Triplet<A,B,C>(
+                this.val0, this.val1, this.val2);
+    }
+    
+    
 }

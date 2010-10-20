@@ -509,4 +509,37 @@ public final class Quintet<A,B,C,D,E> extends Tuple {
     }
     
     
+    
+    
+    
+    
+    
+    
+    public Quartet<B,C,D,E> removeFrom0() {
+        return new Quartet<B,C,D,E>(
+                this.val1, this.val2, this.val3, this.val4);
+    }
+    
+    public Quartet<A,C,D,E> removeFrom1() {
+        return new Quartet<A,C,D,E>(
+                this.val0, this.val2, this.val3, this.val4);
+    }
+    
+    public Quartet<A,B,D,E> removeFrom2() {
+        return new Quartet<A,B,D,E>(
+                this.val0, this.val1, this.val3, this.val4);
+    }
+    
+    public Quartet<A,B,C,E> removeFrom3() {
+        return new Quartet<A,B,C,E>(
+                this.val0, this.val1, this.val2, this.val4);
+    }
+    
+    public Quartet<A,B,C,D> removeFrom4() {
+        return new Quartet<A,B,C,D>(
+                this.val0, this.val1, this.val2, this.val3);
+    }
+    
+    
+    
 }

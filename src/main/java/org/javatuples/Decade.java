@@ -174,5 +174,62 @@ public final class Decade<A,B,C,D,E,F,G,H,I,J> extends Tuple {
                 this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8, value);
     }
     
+
+    
+
+    
+    
+    
+    
+    public Ennead<B,C,D,E,F,G,H,I,J> removeFrom0() {
+        return new Ennead<B,C,D,E,F,G,H,I,J>(
+                this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public Ennead<A,C,D,E,F,G,H,I,J> removeFrom1() {
+        return new Ennead<A,C,D,E,F,G,H,I,J>(
+                this.val0, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public Ennead<A,B,D,E,F,G,H,I,J> removeFrom2() {
+        return new Ennead<A,B,D,E,F,G,H,I,J>(
+                this.val0, this.val1, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public Ennead<A,B,C,E,F,G,H,I,J> removeFrom3() {
+        return new Ennead<A,B,C,E,F,G,H,I,J>(
+                this.val0, this.val1, this.val2, this.val4, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public Ennead<A,B,C,D,F,G,H,I,J> removeFrom4() {
+        return new Ennead<A,B,C,D,F,G,H,I,J>(
+                this.val0, this.val1, this.val2, this.val3, this.val5, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public Ennead<A,B,C,D,E,G,H,I,J> removeFrom5() {
+        return new Ennead<A,B,C,D,E,G,H,I,J>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val6, this.val7, this.val8, this.val9);
+    }
+    
+    public Ennead<A,B,C,D,E,F,H,I,J> removeFrom6() {
+        return new Ennead<A,B,C,D,E,F,H,I,J>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val7, this.val8, this.val9);
+    }
+    
+    public Ennead<A,B,C,D,E,F,G,I,J> removeFrom7() {
+        return new Ennead<A,B,C,D,E,F,G,I,J>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val8, this.val9);
+    }
+    
+    public Ennead<A,B,C,D,E,F,G,H,J> removeFrom8() {
+        return new Ennead<A,B,C,D,E,F,G,H,J>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val9);
+    }
+    
+    public Ennead<A,B,C,D,E,F,G,H,I> removeFrom9() {
+        return new Ennead<A,B,C,D,E,F,G,H,I>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8);
+    }
+    
     
 }

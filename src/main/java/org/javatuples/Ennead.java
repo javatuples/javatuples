@@ -282,4 +282,55 @@ public final class Ennead<A,B,C,D,E,F,G,H,I> extends Tuple {
     }
     
     
+    
+    
+    
+    
+    
+    public Octet<B,C,D,E,F,G,H,I> removeFrom0() {
+        return new Octet<B,C,D,E,F,G,H,I>(
+                this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public Octet<A,C,D,E,F,G,H,I> removeFrom1() {
+        return new Octet<A,C,D,E,F,G,H,I>(
+                this.val0, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public Octet<A,B,D,E,F,G,H,I> removeFrom2() {
+        return new Octet<A,B,D,E,F,G,H,I>(
+                this.val0, this.val1, this.val3, this.val4, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public Octet<A,B,C,E,F,G,H,I> removeFrom3() {
+        return new Octet<A,B,C,E,F,G,H,I>(
+                this.val0, this.val1, this.val2, this.val4, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public Octet<A,B,C,D,F,G,H,I> removeFrom4() {
+        return new Octet<A,B,C,D,F,G,H,I>(
+                this.val0, this.val1, this.val2, this.val3, this.val5, this.val6, this.val7, this.val8);
+    }
+    
+    public Octet<A,B,C,D,E,G,H,I> removeFrom5() {
+        return new Octet<A,B,C,D,E,G,H,I>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val6, this.val7, this.val8);
+    }
+    
+    public Octet<A,B,C,D,E,F,H,I> removeFrom6() {
+        return new Octet<A,B,C,D,E,F,H,I>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val7, this.val8);
+    }
+    
+    public Octet<A,B,C,D,E,F,G,I> removeFrom7() {
+        return new Octet<A,B,C,D,E,F,G,I>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val8);
+    }
+    
+    public Octet<A,B,C,D,E,F,G,H> removeFrom8() {
+        return new Octet<A,B,C,D,E,F,G,H>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7);
+    }
+    
+
 }

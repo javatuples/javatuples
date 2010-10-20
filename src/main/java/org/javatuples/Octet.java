@@ -378,4 +378,53 @@ public final class Octet<A,B,C,D,E,F,G,H> extends Tuple {
     }
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    public Septet<B,C,D,E,F,G,H> removeFrom0() {
+        return new Septet<B,C,D,E,F,G,H>(
+                this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7);
+    }
+    
+    public Septet<A,C,D,E,F,G,H> removeFrom1() {
+        return new Septet<A,C,D,E,F,G,H>(
+                this.val0, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7);
+    }
+    
+    public Septet<A,B,D,E,F,G,H> removeFrom2() {
+        return new Septet<A,B,D,E,F,G,H>(
+                this.val0, this.val1, this.val3, this.val4, this.val5, this.val6, this.val7);
+    }
+    
+    public Septet<A,B,C,E,F,G,H> removeFrom3() {
+        return new Septet<A,B,C,E,F,G,H>(
+                this.val0, this.val1, this.val2, this.val4, this.val5, this.val6, this.val7);
+    }
+    
+    public Septet<A,B,C,D,F,G,H> removeFrom4() {
+        return new Septet<A,B,C,D,F,G,H>(
+                this.val0, this.val1, this.val2, this.val3, this.val5, this.val6, this.val7);
+    }
+    
+    public Septet<A,B,C,D,E,G,H> removeFrom5() {
+        return new Septet<A,B,C,D,E,G,H>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val6, this.val7);
+    }
+    
+    public Septet<A,B,C,D,E,F,H> removeFrom6() {
+        return new Septet<A,B,C,D,E,F,H>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val7);
+    }
+    
+    public Septet<A,B,C,D,E,F,G> removeFrom7() {
+        return new Septet<A,B,C,D,E,F,G>(
+                this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6);
+    }
+    
+    
 }

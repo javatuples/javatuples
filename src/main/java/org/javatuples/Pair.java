@@ -500,5 +500,24 @@ public final class Pair<A,B> extends Tuple {
                 this.val0, value);
     }
     
+ 
+    
+    
+    
+    
+    
+    
+    
+    public Unit<B> removeFrom0() {
+        return new Unit<B>(
+                this.val1);
+    }
+    
+    public Unit<A> removeFrom1() {
+        return new Unit<A>(
+                this.val0);
+    }
+    
+    
     
 }

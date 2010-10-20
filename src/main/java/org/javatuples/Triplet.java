@@ -520,4 +520,25 @@ public final class Triplet<A,B,C> extends Tuple {
     
     
     
+    
+    
+    
+    
+    public Pair<B,C> removeFrom0() {
+        return new Pair<B,C>(
+                this.val1, this.val2);
+    }
+    
+    public Pair<A,C> removeFrom1() {
+        return new Pair<A,C>(
+                this.val0, this.val2);
+    }
+    
+    public Pair<A,B> removeFrom2() {
+        return new Pair<A,B>(
+                this.val0, this.val1);
+    }
+    
+    
+    
 }

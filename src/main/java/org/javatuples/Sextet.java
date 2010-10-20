@@ -483,4 +483,41 @@ public final class Sextet<A,B,C,D,E,F> extends Tuple {
     
     
     
+    
+    
+    
+    
+    public Quintet<B,C,D,E,F> removeFrom0() {
+        return new Quintet<B,C,D,E,F>(
+                this.val1, this.val2, this.val3, this.val4, this.val5);
+    }
+    
+    public Quintet<A,C,D,E,F> removeFrom1() {
+        return new Quintet<A,C,D,E,F>(
+                this.val0, this.val2, this.val3, this.val4, this.val5);
+    }
+    
+    public Quintet<A,B,D,E,F> removeFrom2() {
+        return new Quintet<A,B,D,E,F>(
+                this.val0, this.val1, this.val3, this.val4, this.val5);
+    }
+    
+    public Quintet<A,B,C,E,F> removeFrom3() {
+        return new Quintet<A,B,C,E,F>(
+                this.val0, this.val1, this.val2, this.val4, this.val5);
+    }
+    
+    public Quintet<A,B,C,D,F> removeFrom4() {
+        return new Quintet<A,B,C,D,F>(
+                this.val0, this.val1, this.val2, this.val3, this.val5);
+    }
+    
+    public Quintet<A,B,C,D,E> removeFrom5() {
+        return new Quintet<A,B,C,D,E>(
+                this.val0, this.val1, this.val2, this.val3, this.val4);
+    }
+    
+    
+    
+    
 }
