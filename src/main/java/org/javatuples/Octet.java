@@ -112,55 +112,55 @@ public final class Octet<A,B,C,D,E,F,G,H> extends Tuple {
     
     
     
-    public <X0> Ennead<X0,A,B,C,D,E,F,G,H> addAtPos0(final X0 value0) {
+    public <X0> Ennead<X0,A,B,C,D,E,F,G,H> addAt0(final X0 value0) {
         return new Ennead<X0,A,B,C,D,E,F,G,H>(
                 value0, this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0> Ennead<A,X0,B,C,D,E,F,G,H> addAtPos1(final X0 value0) {
+    public <X0> Ennead<A,X0,B,C,D,E,F,G,H> addAt1(final X0 value0) {
         return new Ennead<A,X0,B,C,D,E,F,G,H>(
                 this.val0, value0, this.val1, this.val2, this.val3, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0> Ennead<A,B,X0,C,D,E,F,G,H> addAtPos2(final X0 value0) {
+    public <X0> Ennead<A,B,X0,C,D,E,F,G,H> addAt2(final X0 value0) {
         return new Ennead<A,B,X0,C,D,E,F,G,H>(
                 this.val0, this.val1, value0, this.val2, this.val3, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0> Ennead<A,B,C,X0,D,E,F,G,H> addAtPos3(final X0 value0) {
+    public <X0> Ennead<A,B,C,X0,D,E,F,G,H> addAt3(final X0 value0) {
         return new Ennead<A,B,C,X0,D,E,F,G,H>(
                 this.val0, this.val1, this.val2, value0, this.val3, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0> Ennead<A,B,C,D,X0,E,F,G,H> addAtPos4(final X0 value0) {
+    public <X0> Ennead<A,B,C,D,X0,E,F,G,H> addAt4(final X0 value0) {
         return new Ennead<A,B,C,D,X0,E,F,G,H>(
                 this.val0, this.val1, this.val2, this.val3, value0, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0> Ennead<A,B,C,D,E,X0,F,G,H> addAtPos5(final X0 value0) {
+    public <X0> Ennead<A,B,C,D,E,X0,F,G,H> addAt5(final X0 value0) {
         return new Ennead<A,B,C,D,E,X0,F,G,H>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, value0, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0> Ennead<A,B,C,D,E,F,X0,G,H> addAtPos6(final X0 value0) {
+    public <X0> Ennead<A,B,C,D,E,F,X0,G,H> addAt6(final X0 value0) {
         return new Ennead<A,B,C,D,E,F,X0,G,H>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, value0, 
                 this.val6, this.val7);
     }
     
-    public <X0> Ennead<A,B,C,D,E,F,G,X0,H> addAtPos7(final X0 value0) {
+    public <X0> Ennead<A,B,C,D,E,F,G,X0,H> addAt7(final X0 value0) {
         return new Ennead<A,B,C,D,E,F,G,X0,H>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, 
                 value0, this.val7);
     }
     
-    public <X0> Ennead<A,B,C,D,E,F,G,H,X0> addAtPos8(final X0 value0) {
+    public <X0> Ennead<A,B,C,D,E,F,G,H,X0> addAt8(final X0 value0) {
         return new Ennead<A,B,C,D,E,F,G,H,X0>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, 
                 this.val7, value0);
@@ -170,55 +170,55 @@ public final class Octet<A,B,C,D,E,F,G,H> extends Tuple {
     
     
     
-    public <X0,X1> Decade<X0,X1,A,B,C,D,E,F,G,H> addAtPos0(final X0 value0, final X1 value1) {
+    public <X0,X1> Decade<X0,X1,A,B,C,D,E,F,G,H> addAt0(final X0 value0, final X1 value1) {
         return new Decade<X0,X1,A,B,C,D,E,F,G,H>(
                 value0, value1, this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0,X1> Decade<A,X0,X1,B,C,D,E,F,G,H> addAtPos1(final X0 value0, final X1 value1) {
+    public <X0,X1> Decade<A,X0,X1,B,C,D,E,F,G,H> addAt1(final X0 value0, final X1 value1) {
         return new Decade<A,X0,X1,B,C,D,E,F,G,H>(
                 this.val0, value0, value1, this.val1, this.val2, this.val3, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0,X1> Decade<A,B,X0,X1,C,D,E,F,G,H> addAtPos2(final X0 value0, final X1 value1) {
+    public <X0,X1> Decade<A,B,X0,X1,C,D,E,F,G,H> addAt2(final X0 value0, final X1 value1) {
         return new Decade<A,B,X0,X1,C,D,E,F,G,H>(
                 this.val0, this.val1, value0, value1, this.val2, this.val3, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0,X1> Decade<A,B,C,X0,X1,D,E,F,G,H> addAtPos3(final X0 value0, final X1 value1) {
+    public <X0,X1> Decade<A,B,C,X0,X1,D,E,F,G,H> addAt3(final X0 value0, final X1 value1) {
         return new Decade<A,B,C,X0,X1,D,E,F,G,H>(
                 this.val0, this.val1, this.val2, value0, value1, this.val3, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0,X1> Decade<A,B,C,D,X0,X1,E,F,G,H> addAtPos4(final X0 value0, final X1 value1) {
+    public <X0,X1> Decade<A,B,C,D,X0,X1,E,F,G,H> addAt4(final X0 value0, final X1 value1) {
         return new Decade<A,B,C,D,X0,X1,E,F,G,H>(
                 this.val0, this.val1, this.val2, this.val3, value0, value1, this.val4, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0,X1> Decade<A,B,C,D,E,X0,X1,F,G,H> addAtPos5(final X0 value0, final X1 value1) {
+    public <X0,X1> Decade<A,B,C,D,E,X0,X1,F,G,H> addAt5(final X0 value0, final X1 value1) {
         return new Decade<A,B,C,D,E,X0,X1,F,G,H>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, value0, value1, this.val5, 
                 this.val6, this.val7);
     }
     
-    public <X0,X1> Decade<A,B,C,D,E,F,X0,X1,G,H> addAtPos6(final X0 value0, final X1 value1) {
+    public <X0,X1> Decade<A,B,C,D,E,F,X0,X1,G,H> addAt6(final X0 value0, final X1 value1) {
         return new Decade<A,B,C,D,E,F,X0,X1,G,H>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, value0, value1, 
                 this.val6, this.val7);
     }
     
-    public <X0,X1> Decade<A,B,C,D,E,F,G,X0,X1,H> addAtPos7(final X0 value0, final X1 value1) {
+    public <X0,X1> Decade<A,B,C,D,E,F,G,X0,X1,H> addAt7(final X0 value0, final X1 value1) {
         return new Decade<A,B,C,D,E,F,G,X0,X1,H>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, 
                 value0, value1, this.val7);
     }
     
-    public <X0,X1> Decade<A,B,C,D,E,F,G,H,X0,X1> addAtPos8(final X0 value0, final X1 value1) {
+    public <X0,X1> Decade<A,B,C,D,E,F,G,H,X0,X1> addAt8(final X0 value0, final X1 value1) {
         return new Decade<A,B,C,D,E,F,G,H,X0,X1>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, 
                 this.val7, value0, value1);
@@ -227,40 +227,40 @@ public final class Octet<A,B,C,D,E,F,G,H> extends Tuple {
     
     
     
-    public <X0> Ennead<X0,A,B,C,D,E,F,G,H> addAtPos0(final Unit<X0> tuple) {
-        return addAtPos0(tuple.getValue0());
+    public <X0> Ennead<X0,A,B,C,D,E,F,G,H> addAt0(final Unit<X0> tuple) {
+        return addAt0(tuple.getValue0());
     }
     
-    public <X0> Ennead<A,X0,B,C,D,E,F,G,H> addAtPos1(final Unit<X0> tuple) {
-        return addAtPos1(tuple.getValue0());
+    public <X0> Ennead<A,X0,B,C,D,E,F,G,H> addAt1(final Unit<X0> tuple) {
+        return addAt1(tuple.getValue0());
     }
     
-    public <X0> Ennead<A,B,X0,C,D,E,F,G,H> addAtPos2(final Unit<X0> tuple) {
-        return addAtPos2(tuple.getValue0());
+    public <X0> Ennead<A,B,X0,C,D,E,F,G,H> addAt2(final Unit<X0> tuple) {
+        return addAt2(tuple.getValue0());
     }
     
-    public <X0> Ennead<A,B,C,X0,D,E,F,G,H> addAtPos3(final Unit<X0> tuple) {
-        return addAtPos3(tuple.getValue0());
+    public <X0> Ennead<A,B,C,X0,D,E,F,G,H> addAt3(final Unit<X0> tuple) {
+        return addAt3(tuple.getValue0());
     }
     
-    public <X0> Ennead<A,B,C,D,X0,E,F,G,H> addAtPos4(final Unit<X0> tuple) {
-        return addAtPos4(tuple.getValue0());
+    public <X0> Ennead<A,B,C,D,X0,E,F,G,H> addAt4(final Unit<X0> tuple) {
+        return addAt4(tuple.getValue0());
     }
     
-    public <X0> Ennead<A,B,C,D,E,X0,F,G,H> addAtPos5(final Unit<X0> tuple) {
-        return addAtPos5(tuple.getValue0());
+    public <X0> Ennead<A,B,C,D,E,X0,F,G,H> addAt5(final Unit<X0> tuple) {
+        return addAt5(tuple.getValue0());
     }
     
-    public <X0> Ennead<A,B,C,D,E,F,X0,G,H> addAtPos6(final Unit<X0> tuple) {
-        return addAtPos6(tuple.getValue0());
+    public <X0> Ennead<A,B,C,D,E,F,X0,G,H> addAt6(final Unit<X0> tuple) {
+        return addAt6(tuple.getValue0());
     }
     
-    public <X0> Ennead<A,B,C,D,E,F,G,X0,H> addAtPos7(final Unit<X0> tuple) {
-        return addAtPos7(tuple.getValue0());
+    public <X0> Ennead<A,B,C,D,E,F,G,X0,H> addAt7(final Unit<X0> tuple) {
+        return addAt7(tuple.getValue0());
     }
     
-    public <X0> Ennead<A,B,C,D,E,F,G,H,X0> addAtPos8(final Unit<X0> tuple) {
-        return addAtPos8(tuple.getValue0());
+    public <X0> Ennead<A,B,C,D,E,F,G,H,X0> addAt8(final Unit<X0> tuple) {
+        return addAt8(tuple.getValue0());
     }
     
 
@@ -269,40 +269,40 @@ public final class Octet<A,B,C,D,E,F,G,H> extends Tuple {
     
     
     
-    public <X0,X1> Decade<X0,X1,A,B,C,D,E,F,G,H> addAtPos0(final Pair<X0,X1> tuple) {
-        return addAtPos0(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Decade<X0,X1,A,B,C,D,E,F,G,H> addAt0(final Pair<X0,X1> tuple) {
+        return addAt0(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Decade<A,X0,X1,B,C,D,E,F,G,H> addAtPos1(final Pair<X0,X1> tuple) {
-        return addAtPos1(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Decade<A,X0,X1,B,C,D,E,F,G,H> addAt1(final Pair<X0,X1> tuple) {
+        return addAt1(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Decade<A,B,X0,X1,C,D,E,F,G,H> addAtPos2(final Pair<X0,X1> tuple) {
-        return addAtPos2(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Decade<A,B,X0,X1,C,D,E,F,G,H> addAt2(final Pair<X0,X1> tuple) {
+        return addAt2(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Decade<A,B,C,X0,X1,D,E,F,G,H> addAtPos3(final Pair<X0,X1> tuple) {
-        return addAtPos3(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Decade<A,B,C,X0,X1,D,E,F,G,H> addAt3(final Pair<X0,X1> tuple) {
+        return addAt3(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Decade<A,B,C,D,X0,X1,E,F,G,H> addAtPos4(final Pair<X0,X1> tuple) {
-        return addAtPos4(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Decade<A,B,C,D,X0,X1,E,F,G,H> addAt4(final Pair<X0,X1> tuple) {
+        return addAt4(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Decade<A,B,C,D,E,X0,X1,F,G,H> addAtPos5(final Pair<X0,X1> tuple) {
-        return addAtPos5(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Decade<A,B,C,D,E,X0,X1,F,G,H> addAt5(final Pair<X0,X1> tuple) {
+        return addAt5(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Decade<A,B,C,D,E,F,X0,X1,G,H> addAtPos6(final Pair<X0,X1> tuple) {
-        return addAtPos6(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Decade<A,B,C,D,E,F,X0,X1,G,H> addAt6(final Pair<X0,X1> tuple) {
+        return addAt6(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Decade<A,B,C,D,E,F,G,X0,X1,H> addAtPos7(final Pair<X0,X1> tuple) {
-        return addAtPos7(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Decade<A,B,C,D,E,F,G,X0,X1,H> addAt7(final Pair<X0,X1> tuple) {
+        return addAt7(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Decade<A,B,C,D,E,F,G,H,X0,X1> addAtPos8(final Pair<X0,X1> tuple) {
-        return addAtPos8(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Decade<A,B,C,D,E,F,G,H,X0,X1> addAt8(final Pair<X0,X1> tuple) {
+        return addAt8(tuple.getValue0(),tuple.getValue1());
     }
 
     
@@ -311,68 +311,68 @@ public final class Octet<A,B,C,D,E,F,G,H> extends Tuple {
     
     
     
-    public <X0> Ennead<A,B,C,D,E,F,G,H,X0> append(final X0 value0) {
-        return addAtPos8(value0);
+    public <X0> Ennead<A,B,C,D,E,F,G,H,X0> add(final X0 value0) {
+        return addAt8(value0);
     }
     
     
-    public <X0> Ennead<A,B,C,D,E,F,G,H,X0> append(final Unit<X0> tuple) {
-        return addAtPos8(tuple);
-    }
-    
-    
-    
-    
-    public <X0,X1> Decade<A,B,C,D,E,F,G,H,X0,X1> append(final X0 value0, final X1 value1) {
-        return addAtPos8(value0, value1);
-    }
-    
-    
-    public <X0,X1> Decade<A,B,C,D,E,F,G,H,X0,X1> append(final Pair<X0,X1> tuple) {
-        return addAtPos8(tuple);
+    public <X0> Ennead<A,B,C,D,E,F,G,H,X0> add(final Unit<X0> tuple) {
+        return addAt8(tuple);
     }
     
     
     
     
+    public <X0,X1> Decade<A,B,C,D,E,F,G,H,X0,X1> add(final X0 value0, final X1 value1) {
+        return addAt8(value0, value1);
+    }
     
     
-    public <X> Octet<X,B,C,D,E,F,G,H> setAtPos0(final X value) {
+    public <X0,X1> Decade<A,B,C,D,E,F,G,H,X0,X1> add(final Pair<X0,X1> tuple) {
+        return addAt8(tuple);
+    }
+    
+    
+    
+    
+    
+    
+    public <X> Octet<X,B,C,D,E,F,G,H> setAt0(final X value) {
         return new Octet<X,B,C,D,E,F,G,H>(
                 value, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7);
     }
     
-    public <X> Octet<A,X,C,D,E,F,G,H> setAtPos1(final X value) {
+    public <X> Octet<A,X,C,D,E,F,G,H> setAt1(final X value) {
         return new Octet<A,X,C,D,E,F,G,H>(
                 this.val0, value, this.val2, this.val3, this.val4, this.val5, this.val6, this.val7);
     }
     
-    public <X> Octet<A,B,X,D,E,F,G,H> setAtPos2(final X value) {
+    public <X> Octet<A,B,X,D,E,F,G,H> setAt2(final X value) {
         return new Octet<A,B,X,D,E,F,G,H>(
                 this.val0, this.val1, value, this.val3, this.val4, this.val5, this.val6, this.val7);
     }
     
-    public <X> Octet<A,B,C,X,E,F,G,H> setAtPos3(final X value) {
+    public <X> Octet<A,B,C,X,E,F,G,H> setAt3(final X value) {
         return new Octet<A,B,C,X,E,F,G,H>(
                 this.val0, this.val1, this.val2, value, this.val4, this.val5, this.val6, this.val7);
     }
     
-    public <X> Octet<A,B,C,D,X,F,G,H> setAtPos4(final X value) {
+    public <X> Octet<A,B,C,D,X,F,G,H> setAt4(final X value) {
         return new Octet<A,B,C,D,X,F,G,H>(
                 this.val0, this.val1, this.val2, this.val3, value, this.val5, this.val6, this.val7);
     }
     
-    public <X> Octet<A,B,C,D,E,X,G,H> setAtPos5(final X value) {
+    public <X> Octet<A,B,C,D,E,X,G,H> setAt5(final X value) {
         return new Octet<A,B,C,D,E,X,G,H>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, value, this.val6, this.val7);
     }
     
-    public <X> Octet<A,B,C,D,E,F,X,H> setAtPos6(final X value) {
+    public <X> Octet<A,B,C,D,E,F,X,H> setAt6(final X value) {
         return new Octet<A,B,C,D,E,F,X,H>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, value, this.val7);
     }
     
-    public <X> Octet<A,B,C,D,E,F,G,X> setAtPos7(final X value) {
+    public <X> Octet<A,B,C,D,E,F,G,X> setAt7(final X value) {
         return new Octet<A,B,C,D,E,F,G,X>(
                 this.val0, this.val1, this.val2, this.val3, this.val4, this.val5, this.val6, value);
     }

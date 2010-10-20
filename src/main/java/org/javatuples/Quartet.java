@@ -81,27 +81,27 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0> Quintet<X0,A,B,C,D> addAtPos0(final X0 value0) {
+    public <X0> Quintet<X0,A,B,C,D> addAt0(final X0 value0) {
         return new Quintet<X0,A,B,C,D>(
                 value0, this.val0, this.val1, this.val2, this.val3);
     }
     
-    public <X0> Quintet<A,X0,B,C,D> addAtPos1(final X0 value0) {
+    public <X0> Quintet<A,X0,B,C,D> addAt1(final X0 value0) {
         return new Quintet<A,X0,B,C,D>(
                 this.val0, value0, this.val1, this.val2, this.val3);
     }
     
-    public <X0> Quintet<A,B,X0,C,D> addAtPos2(final X0 value0) {
+    public <X0> Quintet<A,B,X0,C,D> addAt2(final X0 value0) {
         return new Quintet<A,B,X0,C,D>(
                 this.val0, this.val1, value0, this.val2, this.val3);
     }
     
-    public <X0> Quintet<A,B,C,X0,D> addAtPos3(final X0 value0) {
+    public <X0> Quintet<A,B,C,X0,D> addAt3(final X0 value0) {
         return new Quintet<A,B,C,X0,D>(
                 this.val0, this.val1, this.val2, value0, this.val3);
     }
     
-    public <X0> Quintet<A,B,C,D,X0> addAtPos4(final X0 value0) {
+    public <X0> Quintet<A,B,C,D,X0> addAt4(final X0 value0) {
         return new Quintet<A,B,C,D,X0>(
                 this.val0, this.val1, this.val2, this.val3, value0);
     }
@@ -110,27 +110,27 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0,X1> Sextet<X0,X1,A,B,C,D> addAtPos0(final X0 value0, final X1 value1) {
+    public <X0,X1> Sextet<X0,X1,A,B,C,D> addAt0(final X0 value0, final X1 value1) {
         return new Sextet<X0,X1,A,B,C,D>(
                 value0, value1, this.val0, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1> Sextet<A,X0,X1,B,C,D> addAtPos1(final X0 value0, final X1 value1) {
+    public <X0,X1> Sextet<A,X0,X1,B,C,D> addAt1(final X0 value0, final X1 value1) {
         return new Sextet<A,X0,X1,B,C,D>(
                 this.val0, value0, value1, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1> Sextet<A,B,X0,X1,C,D> addAtPos2(final X0 value0, final X1 value1) {
+    public <X0,X1> Sextet<A,B,X0,X1,C,D> addAt2(final X0 value0, final X1 value1) {
         return new Sextet<A,B,X0,X1,C,D>(
                 this.val0, this.val1, value0, value1, this.val2, this.val3);
     }
     
-    public <X0,X1> Sextet<A,B,C,X0,X1,D> addAtPos3(final X0 value0, final X1 value1) {
+    public <X0,X1> Sextet<A,B,C,X0,X1,D> addAt3(final X0 value0, final X1 value1) {
         return new Sextet<A,B,C,X0,X1,D>(
                 this.val0, this.val1, this.val2, value0, value1, this.val3);
     }
     
-    public <X0,X1> Sextet<A,B,C,D,X0,X1> addAtPos4(final X0 value0, final X1 value1) {
+    public <X0,X1> Sextet<A,B,C,D,X0,X1> addAt4(final X0 value0, final X1 value1) {
         return new Sextet<A,B,C,D,X0,X1>(
                 this.val0, this.val1, this.val2, this.val3, value0, value1);
     }
@@ -141,27 +141,27 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0,X1,X2> Septet<X0,X1,X2,A,B,C,D> addAtPos0(final X0 value0, final X1 value1, final X2 value2) {
+    public <X0,X1,X2> Septet<X0,X1,X2,A,B,C,D> addAt0(final X0 value0, final X1 value1, final X2 value2) {
         return new Septet<X0,X1,X2,A,B,C,D>(
                 value0, value1, value2, this.val0, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1,X2> Septet<A,X0,X1,X2,B,C,D> addAtPos1(final X0 value0, final X1 value1, final X2 value2) {
+    public <X0,X1,X2> Septet<A,X0,X1,X2,B,C,D> addAt1(final X0 value0, final X1 value1, final X2 value2) {
         return new Septet<A,X0,X1,X2,B,C,D>(
                 this.val0, value0, value1, value2, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1,X2> Septet<A,B,X0,X1,X2,C,D> addAtPos2(final X0 value0, final X1 value1, final X2 value2) {
+    public <X0,X1,X2> Septet<A,B,X0,X1,X2,C,D> addAt2(final X0 value0, final X1 value1, final X2 value2) {
         return new Septet<A,B,X0,X1,X2,C,D>(
                 this.val0, this.val1, value0, value1, value2, this.val2, this.val3);
     }
     
-    public <X0,X1,X2> Septet<A,B,C,X0,X1,X2,D> addAtPos3(final X0 value0, final X1 value1, final X2 value2) {
+    public <X0,X1,X2> Septet<A,B,C,X0,X1,X2,D> addAt3(final X0 value0, final X1 value1, final X2 value2) {
         return new Septet<A,B,C,X0,X1,X2,D>(
                 this.val0, this.val1, this.val2, value0, value1, value2, this.val3);
     }
     
-    public <X0,X1,X2> Septet<A,B,C,D,X0,X1,X2> addAtPos4(final X0 value0, final X1 value1, final X2 value2) {
+    public <X0,X1,X2> Septet<A,B,C,D,X0,X1,X2> addAt4(final X0 value0, final X1 value1, final X2 value2) {
         return new Septet<A,B,C,D,X0,X1,X2>(
                 this.val0, this.val1, this.val2, this.val3, value0, value1, value2);
     }
@@ -172,27 +172,27 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0,X1,X2,X3> Octet<X0,X1,X2,X3,A,B,C,D> addAtPos0(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
+    public <X0,X1,X2,X3> Octet<X0,X1,X2,X3,A,B,C,D> addAt0(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
         return new Octet<X0,X1,X2,X3,A,B,C,D>(
                 value0, value1, value2, value3, this.val0, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1,X2,X3> Octet<A,X0,X1,X2,X3,B,C,D> addAtPos1(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
+    public <X0,X1,X2,X3> Octet<A,X0,X1,X2,X3,B,C,D> addAt1(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
         return new Octet<A,X0,X1,X2,X3,B,C,D>(
                 this.val0, value0, value1, value2, value3, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1,X2,X3> Octet<A,B,X0,X1,X2,X3,C,D> addAtPos2(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
+    public <X0,X1,X2,X3> Octet<A,B,X0,X1,X2,X3,C,D> addAt2(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
         return new Octet<A,B,X0,X1,X2,X3,C,D>(
                 this.val0, this.val1, value0, value1, value2, value3, this.val2, this.val3);
     }
     
-    public <X0,X1,X2,X3> Octet<A,B,C,X0,X1,X2,X3,D> addAtPos3(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
+    public <X0,X1,X2,X3> Octet<A,B,C,X0,X1,X2,X3,D> addAt3(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
         return new Octet<A,B,C,X0,X1,X2,X3,D>(
                 this.val0, this.val1, this.val2, value0, value1, value2, value3, this.val3);
     }
     
-    public <X0,X1,X2,X3> Octet<A,B,C,D,X0,X1,X2,X3> addAtPos4(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
+    public <X0,X1,X2,X3> Octet<A,B,C,D,X0,X1,X2,X3> addAt4(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
         return new Octet<A,B,C,D,X0,X1,X2,X3>(
                 this.val0, this.val1, this.val2, this.val3, value0, value1, value2, value3);
     }
@@ -202,27 +202,27 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0,X1,X2,X3,X4> Ennead<X0,X1,X2,X3,X4,A,B,C,D> addAtPos0(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
+    public <X0,X1,X2,X3,X4> Ennead<X0,X1,X2,X3,X4,A,B,C,D> addAt0(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
         return new Ennead<X0,X1,X2,X3,X4,A,B,C,D>(
                 value0, value1, value2, value3, value4, this.val0, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1,X2,X3,X4> Ennead<A,X0,X1,X2,X3,X4,B,C,D> addAtPos1(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
+    public <X0,X1,X2,X3,X4> Ennead<A,X0,X1,X2,X3,X4,B,C,D> addAt1(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
         return new Ennead<A,X0,X1,X2,X3,X4,B,C,D>(
                 this.val0, value0, value1, value2, value3, value4, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1,X2,X3,X4> Ennead<A,B,X0,X1,X2,X3,X4,C,D> addAtPos2(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
+    public <X0,X1,X2,X3,X4> Ennead<A,B,X0,X1,X2,X3,X4,C,D> addAt2(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
         return new Ennead<A,B,X0,X1,X2,X3,X4,C,D>(
                 this.val0, this.val1, value0, value1, value2, value3, value4, this.val2, this.val3);
     }
     
-    public <X0,X1,X2,X3,X4> Ennead<A,B,C,X0,X1,X2,X3,X4,D> addAtPos3(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
+    public <X0,X1,X2,X3,X4> Ennead<A,B,C,X0,X1,X2,X3,X4,D> addAt3(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
         return new Ennead<A,B,C,X0,X1,X2,X3,X4,D>(
                 this.val0, this.val1, this.val2, value0, value1, value2, value3, value4, this.val3);
     }
     
-    public <X0,X1,X2,X3,X4> Ennead<A,B,C,D,X0,X1,X2,X3,X4> addAtPos4(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
+    public <X0,X1,X2,X3,X4> Ennead<A,B,C,D,X0,X1,X2,X3,X4> addAt4(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
         return new Ennead<A,B,C,D,X0,X1,X2,X3,X4>(
                 this.val0, this.val1, this.val2, this.val3, value0, value1, value2, value3, value4);
     }
@@ -232,27 +232,27 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0,X1,X2,X3,X4,X5> Decade<X0,X1,X2,X3,X4,X5,A,B,C,D> addAtPos0(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
+    public <X0,X1,X2,X3,X4,X5> Decade<X0,X1,X2,X3,X4,X5,A,B,C,D> addAt0(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
         return new Decade<X0,X1,X2,X3,X4,X5,A,B,C,D>(
                 value0, value1, value2, value3, value4, value5, this.val0, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,X0,X1,X2,X3,X4,X5,B,C,D> addAtPos1(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
+    public <X0,X1,X2,X3,X4,X5> Decade<A,X0,X1,X2,X3,X4,X5,B,C,D> addAt1(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
         return new Decade<A,X0,X1,X2,X3,X4,X5,B,C,D>(
                 this.val0, value0, value1, value2, value3, value4, value5, this.val1, this.val2, this.val3);
     }
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,B,X0,X1,X2,X3,X4,X5,C,D> addAtPos2(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
+    public <X0,X1,X2,X3,X4,X5> Decade<A,B,X0,X1,X2,X3,X4,X5,C,D> addAt2(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
         return new Decade<A,B,X0,X1,X2,X3,X4,X5,C,D>(
                 this.val0, this.val1, value0, value1, value2, value3, value4, value5, this.val2, this.val3);
     }
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,X0,X1,X2,X3,X4,X5,D> addAtPos3(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
+    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,X0,X1,X2,X3,X4,X5,D> addAt3(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
         return new Decade<A,B,C,X0,X1,X2,X3,X4,X5,D>(
                 this.val0, this.val1, this.val2, value0, value1, value2, value3, value4, value5, this.val3);
     }
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,D,X0,X1,X2,X3,X4,X5> addAtPos4(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
+    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,D,X0,X1,X2,X3,X4,X5> addAt4(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
         return new Decade<A,B,C,D,X0,X1,X2,X3,X4,X5>(
                 this.val0, this.val1, this.val2, this.val3, value0, value1, value2, value3, value4, value5);
     }
@@ -263,24 +263,24 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0> Quintet<X0,A,B,C,D> addAtPos0(final Unit<X0> tuple) {
-        return addAtPos0(tuple.getValue0());
+    public <X0> Quintet<X0,A,B,C,D> addAt0(final Unit<X0> tuple) {
+        return addAt0(tuple.getValue0());
     }
     
-    public <X0> Quintet<A,X0,B,C,D> addAtPos1(final Unit<X0> tuple) {
-        return addAtPos1(tuple.getValue0());
+    public <X0> Quintet<A,X0,B,C,D> addAt1(final Unit<X0> tuple) {
+        return addAt1(tuple.getValue0());
     }
     
-    public <X0> Quintet<A,B,X0,C,D> addAtPos2(final Unit<X0> tuple) {
-        return addAtPos2(tuple.getValue0());
+    public <X0> Quintet<A,B,X0,C,D> addAt2(final Unit<X0> tuple) {
+        return addAt2(tuple.getValue0());
     }
     
-    public <X0> Quintet<A,B,C,X0,D> addAtPos3(final Unit<X0> tuple) {
-        return addAtPos3(tuple.getValue0());
+    public <X0> Quintet<A,B,C,X0,D> addAt3(final Unit<X0> tuple) {
+        return addAt3(tuple.getValue0());
     }
     
-    public <X0> Quintet<A,B,C,D,X0> addAtPos4(final Unit<X0> tuple) {
-        return addAtPos4(tuple.getValue0());
+    public <X0> Quintet<A,B,C,D,X0> addAt4(final Unit<X0> tuple) {
+        return addAt4(tuple.getValue0());
     }
     
 
@@ -289,79 +289,24 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0,X1> Sextet<X0,X1,A,B,C,D> addAtPos0(final Pair<X0,X1> tuple) {
-        return addAtPos0(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Sextet<X0,X1,A,B,C,D> addAt0(final Pair<X0,X1> tuple) {
+        return addAt0(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Sextet<A,X0,X1,B,C,D> addAtPos1(final Pair<X0,X1> tuple) {
-        return addAtPos1(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Sextet<A,X0,X1,B,C,D> addAt1(final Pair<X0,X1> tuple) {
+        return addAt1(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Sextet<A,B,X0,X1,C,D> addAtPos2(final Pair<X0,X1> tuple) {
-        return addAtPos2(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Sextet<A,B,X0,X1,C,D> addAt2(final Pair<X0,X1> tuple) {
+        return addAt2(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Sextet<A,B,C,X0,X1,D> addAtPos3(final Pair<X0,X1> tuple) {
-        return addAtPos3(tuple.getValue0(),tuple.getValue1());
+    public <X0,X1> Sextet<A,B,C,X0,X1,D> addAt3(final Pair<X0,X1> tuple) {
+        return addAt3(tuple.getValue0(),tuple.getValue1());
     }
     
-    public <X0,X1> Sextet<A,B,C,D,X0,X1> addAtPos4(final Pair<X0,X1> tuple) {
-        return addAtPos4(tuple.getValue0(),tuple.getValue1());
-    }
-
-    
-    
-
-    
-    
-    
-    
-    public <X0,X1,X2> Septet<X0,X1,X2,A,B,C,D> addAtPos0(final Triplet<X0,X1,X2> tuple) {
-        return addAtPos0(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
-    }
-    
-    public <X0,X1,X2> Septet<A,X0,X1,X2,B,C,D> addAtPos1(final Triplet<X0,X1,X2> tuple) {
-        return addAtPos1(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
-    }
-    
-    public <X0,X1,X2> Septet<A,B,X0,X1,X2,C,D> addAtPos2(final Triplet<X0,X1,X2> tuple) {
-        return addAtPos2(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
-    }
-    
-    public <X0,X1,X2> Septet<A,B,C,X0,X1,X2,D> addAtPos3(final Triplet<X0,X1,X2> tuple) {
-        return addAtPos3(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
-    }
-    
-    public <X0,X1,X2> Septet<A,B,C,D,X0,X1,X2> addAtPos4(final Triplet<X0,X1,X2> tuple) {
-        return addAtPos4(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
-    }
-    
-    
-    
-
-
-    
-    
-    
-    
-    public <X0,X1,X2,X3> Octet<X0,X1,X2,X3,A,B,C,D> addAtPos0(final Quartet<X0,X1,X2,X3> tuple) {
-        return addAtPos0(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
-    }
-    
-    public <X0,X1,X2,X3> Octet<A,X0,X1,X2,X3,B,C,D> addAtPos1(final Quartet<X0,X1,X2,X3> tuple) {
-        return addAtPos1(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
-    }
-    
-    public <X0,X1,X2,X3> Octet<A,B,X0,X1,X2,X3,C,D> addAtPos2(final Quartet<X0,X1,X2,X3> tuple) {
-        return addAtPos2(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
-    }
-    
-    public <X0,X1,X2,X3> Octet<A,B,C,X0,X1,X2,X3,D> addAtPos3(final Quartet<X0,X1,X2,X3> tuple) {
-        return addAtPos3(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
-    }
-    
-    public <X0,X1,X2,X3> Octet<A,B,C,D,X0,X1,X2,X3> addAtPos4(final Quartet<X0,X1,X2,X3> tuple) {
-        return addAtPos4(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
+    public <X0,X1> Sextet<A,B,C,D,X0,X1> addAt4(final Pair<X0,X1> tuple) {
+        return addAt4(tuple.getValue0(),tuple.getValue1());
     }
 
     
@@ -371,24 +316,52 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0,X1,X2,X3,X4> Ennead<X0,X1,X2,X3,X4,A,B,C,D> addAtPos0(final Quintet<X0,X1,X2,X3,X4> tuple) {
-        return addAtPos0(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
+    public <X0,X1,X2> Septet<X0,X1,X2,A,B,C,D> addAt0(final Triplet<X0,X1,X2> tuple) {
+        return addAt0(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
     }
     
-    public <X0,X1,X2,X3,X4> Ennead<A,X0,X1,X2,X3,X4,B,C,D> addAtPos1(final Quintet<X0,X1,X2,X3,X4> tuple) {
-        return addAtPos1(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
+    public <X0,X1,X2> Septet<A,X0,X1,X2,B,C,D> addAt1(final Triplet<X0,X1,X2> tuple) {
+        return addAt1(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
     }
     
-    public <X0,X1,X2,X3,X4> Ennead<A,B,X0,X1,X2,X3,X4,C,D> addAtPos2(final Quintet<X0,X1,X2,X3,X4> tuple) {
-        return addAtPos2(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
+    public <X0,X1,X2> Septet<A,B,X0,X1,X2,C,D> addAt2(final Triplet<X0,X1,X2> tuple) {
+        return addAt2(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
     }
     
-    public <X0,X1,X2,X3,X4> Ennead<A,B,C,X0,X1,X2,X3,X4,D> addAtPos3(final Quintet<X0,X1,X2,X3,X4> tuple) {
-        return addAtPos3(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
+    public <X0,X1,X2> Septet<A,B,C,X0,X1,X2,D> addAt3(final Triplet<X0,X1,X2> tuple) {
+        return addAt3(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
     }
     
-    public <X0,X1,X2,X3,X4> Ennead<A,B,C,D,X0,X1,X2,X3,X4> addAtPos4(final Quintet<X0,X1,X2,X3,X4> tuple) {
-        return addAtPos4(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
+    public <X0,X1,X2> Septet<A,B,C,D,X0,X1,X2> addAt4(final Triplet<X0,X1,X2> tuple) {
+        return addAt4(tuple.getValue0(),tuple.getValue1(),tuple.getValue2());
+    }
+    
+    
+    
+
+
+    
+    
+    
+    
+    public <X0,X1,X2,X3> Octet<X0,X1,X2,X3,A,B,C,D> addAt0(final Quartet<X0,X1,X2,X3> tuple) {
+        return addAt0(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
+    }
+    
+    public <X0,X1,X2,X3> Octet<A,X0,X1,X2,X3,B,C,D> addAt1(final Quartet<X0,X1,X2,X3> tuple) {
+        return addAt1(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
+    }
+    
+    public <X0,X1,X2,X3> Octet<A,B,X0,X1,X2,X3,C,D> addAt2(final Quartet<X0,X1,X2,X3> tuple) {
+        return addAt2(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
+    }
+    
+    public <X0,X1,X2,X3> Octet<A,B,C,X0,X1,X2,X3,D> addAt3(final Quartet<X0,X1,X2,X3> tuple) {
+        return addAt3(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
+    }
+    
+    public <X0,X1,X2,X3> Octet<A,B,C,D,X0,X1,X2,X3> addAt4(final Quartet<X0,X1,X2,X3> tuple) {
+        return addAt4(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3());
     }
 
     
@@ -398,24 +371,51 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0,X1,X2,X3,X4,X5> Decade<X0,X1,X2,X3,X4,X5,A,B,C,D> addAtPos0(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
-        return addAtPos0(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
+    public <X0,X1,X2,X3,X4> Ennead<X0,X1,X2,X3,X4,A,B,C,D> addAt0(final Quintet<X0,X1,X2,X3,X4> tuple) {
+        return addAt0(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
     }
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,X0,X1,X2,X3,X4,X5,B,C,D> addAtPos1(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
-        return addAtPos1(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
+    public <X0,X1,X2,X3,X4> Ennead<A,X0,X1,X2,X3,X4,B,C,D> addAt1(final Quintet<X0,X1,X2,X3,X4> tuple) {
+        return addAt1(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
     }
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,B,X0,X1,X2,X3,X4,X5,C,D> addAtPos2(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
-        return addAtPos2(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
+    public <X0,X1,X2,X3,X4> Ennead<A,B,X0,X1,X2,X3,X4,C,D> addAt2(final Quintet<X0,X1,X2,X3,X4> tuple) {
+        return addAt2(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
     }
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,X0,X1,X2,X3,X4,X5,D> addAtPos3(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
-        return addAtPos3(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
+    public <X0,X1,X2,X3,X4> Ennead<A,B,C,X0,X1,X2,X3,X4,D> addAt3(final Quintet<X0,X1,X2,X3,X4> tuple) {
+        return addAt3(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
     }
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,D,X0,X1,X2,X3,X4,X5> addAtPos4(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
-        return addAtPos4(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
+    public <X0,X1,X2,X3,X4> Ennead<A,B,C,D,X0,X1,X2,X3,X4> addAt4(final Quintet<X0,X1,X2,X3,X4> tuple) {
+        return addAt4(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4());
+    }
+
+    
+    
+
+    
+    
+    
+    
+    public <X0,X1,X2,X3,X4,X5> Decade<X0,X1,X2,X3,X4,X5,A,B,C,D> addAt0(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
+        return addAt0(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
+    }
+    
+    public <X0,X1,X2,X3,X4,X5> Decade<A,X0,X1,X2,X3,X4,X5,B,C,D> addAt1(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
+        return addAt1(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
+    }
+    
+    public <X0,X1,X2,X3,X4,X5> Decade<A,B,X0,X1,X2,X3,X4,X5,C,D> addAt2(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
+        return addAt2(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
+    }
+    
+    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,X0,X1,X2,X3,X4,X5,D> addAt3(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
+        return addAt3(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
+    }
+    
+    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,D,X0,X1,X2,X3,X4,X5> addAt4(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
+        return addAt4(tuple.getValue0(),tuple.getValue1(),tuple.getValue2(),tuple.getValue3(),tuple.getValue4(),tuple.getValue5());
     }
 
     
@@ -423,75 +423,75 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X0> Quintet<A,B,C,D,X0> append(final X0 value0) {
-        return addAtPos4(value0);
+    public <X0> Quintet<A,B,C,D,X0> add(final X0 value0) {
+        return addAt4(value0);
     }
     
     
-    public <X0> Quintet<A,B,C,D,X0> append(final Unit<X0> tuple) {
-        return addAtPos4(tuple);
-    }
-    
-    
-    
-    
-    public <X0,X1> Sextet<A,B,C,D,X0,X1> append(final X0 value0, final X1 value1) {
-        return addAtPos4(value0, value1);
-    }
-    
-    
-    public <X0,X1> Sextet<A,B,C,D,X0,X1> append(final Pair<X0,X1> tuple) {
-        return addAtPos4(tuple);
+    public <X0> Quintet<A,B,C,D,X0> add(final Unit<X0> tuple) {
+        return addAt4(tuple);
     }
     
     
     
     
-    public <X0,X1,X2> Septet<A,B,C,D,X0,X1,X2> append(final X0 value0, final X1 value1, final X2 value2) {
-        return addAtPos4(value0, value1, value2);
+    public <X0,X1> Sextet<A,B,C,D,X0,X1> add(final X0 value0, final X1 value1) {
+        return addAt4(value0, value1);
     }
     
     
-    public <X0,X1,X2> Septet<A,B,C,D,X0,X1,X2> append(final Triplet<X0,X1,X2> tuple) {
-        return addAtPos4(tuple);
-    }
-    
-    
-    
-    
-    public <X0,X1,X2,X3> Octet<A,B,C,D,X0,X1,X2,X3> append(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
-        return addAtPos4(value0, value1, value2, value3);
-    }
-    
-    
-    public <X0,X1,X2,X3> Octet<A,B,C,D,X0,X1,X2,X3> append(final Quartet<X0,X1,X2,X3> tuple) {
-        return addAtPos4(tuple);
+    public <X0,X1> Sextet<A,B,C,D,X0,X1> add(final Pair<X0,X1> tuple) {
+        return addAt4(tuple);
     }
     
     
     
     
-    
-    public <X0,X1,X2,X3,X4> Ennead<A,B,C,D,X0,X1,X2,X3,X4> append(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
-        return addAtPos4(value0, value1, value2, value3, value4);
+    public <X0,X1,X2> Septet<A,B,C,D,X0,X1,X2> add(final X0 value0, final X1 value1, final X2 value2) {
+        return addAt4(value0, value1, value2);
     }
     
     
-    public <X0,X1,X2,X3,X4> Ennead<A,B,C,D,X0,X1,X2,X3,X4> append(final Quintet<X0,X1,X2,X3,X4> tuple) {
-        return addAtPos4(tuple);
+    public <X0,X1,X2> Septet<A,B,C,D,X0,X1,X2> add(final Triplet<X0,X1,X2> tuple) {
+        return addAt4(tuple);
+    }
+    
+    
+    
+    
+    public <X0,X1,X2,X3> Octet<A,B,C,D,X0,X1,X2,X3> add(final X0 value0, final X1 value1, final X2 value2, final X3 value3) {
+        return addAt4(value0, value1, value2, value3);
+    }
+    
+    
+    public <X0,X1,X2,X3> Octet<A,B,C,D,X0,X1,X2,X3> add(final Quartet<X0,X1,X2,X3> tuple) {
+        return addAt4(tuple);
     }
     
     
     
     
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,D,X0,X1,X2,X3,X4,X5> append(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
-        return addAtPos4(value0, value1, value2, value3, value4, value5);
+    public <X0,X1,X2,X3,X4> Ennead<A,B,C,D,X0,X1,X2,X3,X4> add(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4) {
+        return addAt4(value0, value1, value2, value3, value4);
     }
     
     
-    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,D,X0,X1,X2,X3,X4,X5> append(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
-        return addAtPos4(tuple);
+    public <X0,X1,X2,X3,X4> Ennead<A,B,C,D,X0,X1,X2,X3,X4> add(final Quintet<X0,X1,X2,X3,X4> tuple) {
+        return addAt4(tuple);
+    }
+    
+    
+    
+    
+    
+    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,D,X0,X1,X2,X3,X4,X5> add(final X0 value0, final X1 value1, final X2 value2, final X3 value3, final X4 value4, final X5 value5) {
+        return addAt4(value0, value1, value2, value3, value4, value5);
+    }
+    
+    
+    public <X0,X1,X2,X3,X4,X5> Decade<A,B,C,D,X0,X1,X2,X3,X4,X5> add(final Sextet<X0,X1,X2,X3,X4,X5> tuple) {
+        return addAt4(tuple);
     }
     
     
@@ -502,22 +502,22 @@ public final class Quartet<A,B,C,D> extends Tuple {
     
     
     
-    public <X> Quartet<X,B,C,D> setAtPos0(final X value) {
+    public <X> Quartet<X,B,C,D> setAt0(final X value) {
         return new Quartet<X,B,C,D>(
                 value, this.val1, this.val2, this.val3);
     }
     
-    public <X> Quartet<A,X,C,D> setAtPos1(final X value) {
+    public <X> Quartet<A,X,C,D> setAt1(final X value) {
         return new Quartet<A,X,C,D>(
                 this.val0, value, this.val2, this.val3);
     }
     
-    public <X> Quartet<A,B,X,D> setAtPos2(final X value) {
+    public <X> Quartet<A,B,X,D> setAt2(final X value) {
         return new Quartet<A,B,X,D>(
                 this.val0, this.val1, value, this.val3);
     }
     
-    public <X> Quartet<A,B,C,X> setAtPos3(final X value) {
+    public <X> Quartet<A,B,C,X> setAt3(final X value) {
         return new Quartet<A,B,C,X>(
                 this.val0, this.val1, this.val2, value);
     }

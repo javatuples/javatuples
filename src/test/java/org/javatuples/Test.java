@@ -43,14 +43,14 @@ public class Test extends TestCase {
         final Ennead<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> ennead =
             Ennead.with(Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3), Integer.valueOf(4), Integer.valueOf(5), Integer.valueOf(6), Integer.valueOf(7), Integer.valueOf(8), Integer.valueOf(9));
 
-        System.out.println(ennead.addAtPos1("Pepito"));
-        System.out.println(ennead.append(new Socket()));
+        System.out.println(ennead.addAt1("Pepito"));
+        System.out.println(ennead.add(new Socket()));
      
         final Sextet<String,Integer,String,String,String,String> sextet =
             Tuple.with("1.0",Integer.valueOf(2),"3.0","4.0","5.0","6.0");
         
         System.out.println(sextet);
-        System.out.println(sextet.addAtPos3("Perico"));
+        System.out.println(sextet.addAt3("Perico"));
         
         Pair<String,Object> pair = Pair.with("a", null);
         
