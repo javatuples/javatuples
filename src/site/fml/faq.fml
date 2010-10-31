@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<faqs title="Frequently Asked Questions">
+
+
+  <part id="aboutjavatuples">
+    <title>About javatuples</title>
+    
+    <faq id="where-does-javatuples-come-from">
+      <question>Where does javatuples come from? Is it made or backed by any software company?</question>
+      <answer>
+        <p>
+          javatuples is Open Source Software created by a Spanish Software Engineer
+          called <a href="team.html">Daniel Fernández</a> in his spare time. 
+        </p>
+        <p>
+          It is neither made nor backed
+          by any software (or any other type of) company, and it is offered to the public
+          totally free of charge, both in binary and in source code forms, under the <b>Apache License 2.0</b>.
+        </p>
+      </answer>
+    </faq>
+    
+    <faq id="does-javatuples-offer-commercial-support">
+      <question>Does javatuples offer any type of commercial support?</question>
+      <answer>
+        <p>
+          No, it does not. Commercial support is not offered at the moment, but
+          there is a <a href="userlist.html">User Forum/List</a> at your disposal.
+        </p>
+      </answer>
+    </faq>
+    
+    <faq id="contribute">
+      <question>How can I contribute to javatuples?</question>
+      <answer>
+        <p>
+          In many ways:
+        </p>
+        <ul>
+          <li>You can write in the <a href="userlist.html">User 
+              Forum/List</a> (or directly to the <a href="team.html">Team</a>) with your
+              ideas for improving javatuples.</li>
+          <li>You can contribute some code, write a patch for a new feature
+              or behaviour (please, tell the project admins first about your idea so 
+              that effort can be correctly coordinated).</li> 
+          <li>You can write articles, reviews, blog posts, etc. about javatuples, showing
+              how it works or how it integrates with other technologies.</li> 
+          <li>You can promote javatuples in your company/work and among your colleague developers.</li>
+        </ul>
+        <p>
+          If you want to contribute some code to javatuples, please read first the
+          page on <a href="contributing.html">Contributing to javatuples</a>.
+        </p>
+      </answer>
+    </faq>
+
+  </part>
+  
+
+  <part id="general">
+    <title>General</title>
+    
+    <faq id="what-is-javatuples-useful-for">
+      <question>What is javatuples useful for?</question>
+      <answer>
+        <p>
+          ...
+        </p>
+      </answer>
+    </faq>
+    
+  </part>
+
+    
+</faqs>
