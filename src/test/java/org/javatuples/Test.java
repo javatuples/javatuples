@@ -51,7 +51,7 @@ public class Test extends TestCase {
         System.out.println(ennead.add(new Socket()));
      
         final Sextet<String,Integer,String,String,String,String> sextet =
-            Tuple.with("1.0",Integer.valueOf(2),"3.0","4.0","5.0","6.0");
+            Sextet.with("1.0",Integer.valueOf(2),"3.0","4.0","5.0","6.0");
         
         System.out.println(sextet);
         System.out.println(sextet.addAt3("Perico"));

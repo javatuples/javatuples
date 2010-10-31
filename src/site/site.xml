@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="javatuples">
+
+
+  <bannerLeft>
+    <name>javatuples</name>
+    <src>images/javatuples_logo.png</src>
+    <href>http://www.javatuples.org/</href>
+  </bannerLeft>
+  
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-default-skin</artifactId>
+  </skin>
+  
+  <publishDate format="dd MMM yyyy" position="left" />
+  
+  <version position="left" />
+
+
+  
+  <body>
+  
+    <links>
+      <item name="Main" href="index.html" />
+      <item name="Download" href="download.html" />
+      <item name="User Forum/List" href="userlist.html" />
+      <item name="Javadoc" href="apidocs/index.html" />
+      <item name="Sourceforge.net Project Page" href="http://www.sourceforge.net/projects/java-tuples" />
+    </links>
+
+    <menu name="The javatuples Project">
+      <item name="· Main" href="index.html"/>
+      <item name="· Download" href="download.html"/>
+      <item name="· Maven Info" href="maveninfo.html"/>
+      <item name="· Dependencies" href="dependencies.html"/>
+      <item name="· User Forum/List" href="userlist.html"/>
+      <item name="· Using javatuples" href="basics.html"/>
+      <item name="· Source Repository" href="source-repository.html" />
+      <item name="· License" href="license.html"/>
+      <item name="· Team" href="team.html"/>
+    </menu>
+
+
+    <head>
+<!-- 
+      <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+        try {
+          var pageTracker = _gat._getTracker("UA-1276954-7");
+          pageTracker._trackPageview();
+        } catch(err) {}
+      </script>
+-->
+    </head>
+
+  </body>
+
+
+
+  <poweredBy>   
+       <logo name="Built with Maven 2" href="http://maven.apache.org" img="http://maven.apache.org/images/logos/maven-feather.png" />    
+       <logo name="Hosted on SourceForge.net" href="http://sourceforge.net" img="http://sflogo.sourceforge.net/sflogo.php?group_id=183612&amp;type=1"/>
+  </poweredBy>    
+  
+  
+</project>

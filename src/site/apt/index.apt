@@ -1,0 +1,37 @@
+  -------
+  Main
+  -------
+
+  <<javatuples 1.0 RELEASED!>> (November 1st, 2010). <<{{{./download.html}[DOWNLOAD]}}>>
+
+javatuples
+
+  javatuples is one of the simplest java libraries ever made. Its concept is very simple: providing
+  a set of <tuple> java classes. Specifically, from 1-element tuples (<<<Unit>>>s) to ten-element 
+  tuples (<<<Decade>>>s).
+  
+  <<Tuples? What are tuples?>>
+  
+  A tuple is just a sequence of data that do not necessarily have relations of any kind among them.
+  For example: <<<[23, "Saturn", java.sql.Connection@li734s]>>> is a tuple of three elements: a
+  <triplet> containing an integer, a String, and a JDBC Connection object. As simple as that.
+  
+  But very probably, you've already used tuples before like:
+  
+---
+    public Pair<String,Integer> doSomething() {
+        ....
+---
+
+  That <<<Pair<A,B>>>> class is something you have probably programmed yourself in a variety of
+  projects, in order to being able to do things like returning more than one value from a single
+  method.
+  
+  And what about:
+  
+---
+    final LabelValue<String,Integer> labelVal = 
+        new LabelValue<String,Integer>("age", Integer.valueOf(63));
+---
+  
+  The omnipresent <<<LabelValue>>> class is something needed in a number of situations

@@ -1,0 +1,19 @@
+  -------
+  Using javatuples with Maven
+  -------
+
+Using javatuples with Maven
+  
+  In order to include javatuples in your maven-managed project, you will have to declare your dependency 
+  like this:
+  
++--  
+    <dependency>
+        <groupId>org.javatuples</groupId>
+        <artifactId>javatuples</artifactId>
+        <version>[version]</version>
+        <scope>compile</scope>
+    </dependency>
++--  
+  
+   
