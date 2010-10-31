@@ -19,6 +19,9 @@
  */
 package org.javatuples;
 
+import java.util.Collection;
+import java.util.Iterator;
+
 public final class Septet<A,B,C,D,E,F,G> extends Tuple {
 
     private static final long serialVersionUID = -2133846648934305169L;
@@ -38,6 +41,35 @@ public final class Septet<A,B,C,D,E,F,G> extends Tuple {
     public static <A,B,C,D,E,F,G> Septet<A,B,C,D,E,F,G> with(final A value0, final B value1, final C value2, final D value3, final E value4, final F value5, final G value6) {
         return new Septet<A,B,C,D,E,F,G>(value0,value1,value2,value3,value4,value5,value6);
     }
+
+    
+    public static <X> Septet<X,X,X,X,X,X,X> fromArray(final X[] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("Array cannot be null");
+        }
+        if (array.length != 7) {
+            throw new IllegalArgumentException("Array must have exactly 7 elements in order to create a Septet. Size is " + array.length);
+        }
+        return new Septet<X,X,X,X,X,X,X>(
+                array[0],array[1],array[2],array[3],array[4],
+                array[5],array[6]);
+    }
+
+    
+    public static <X> Septet<X,X,X,X,X,X,X> fromCollection(final Collection<X> collection) {
+        if (collection == null) {
+            throw new IllegalArgumentException("Collection cannot be null");
+        }
+        if (collection.size() != 7) {
+            throw new IllegalArgumentException("Collection must have exactly 7 elements in order to create a Septet. Size is " + collection.size());
+        }
+        final Iterator<X> iter = collection.iterator();
+        return new Septet<X,X,X,X,X,X,X>(
+                iter.next(),iter.next(),iter.next(),iter.next(),iter.next(),
+                iter.next(),iter.next());
+    }
+    
+    
     
     
     public Septet(

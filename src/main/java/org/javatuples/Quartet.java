@@ -19,6 +19,9 @@
  */
 package org.javatuples;
 
+import java.util.Collection;
+import java.util.Iterator;
+
 public final class Quartet<A,B,C,D> extends Tuple {
 
     private static final long serialVersionUID = 2445136048617019549L;
@@ -35,6 +38,31 @@ public final class Quartet<A,B,C,D> extends Tuple {
     public static <A,B,C,D> Quartet<A,B,C,D> with(final A value0, final B value1, final C value2, final D value3) {
         return new Quartet<A,B,C,D>(value0,value1,value2,value3);
     }
+
+    
+    public static <X> Quartet<X,X,X,X> fromArray(final X[] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("Array cannot be null");
+        }
+        if (array.length != 4) {
+            throw new IllegalArgumentException("Array must have exactly 4 elements in order to create a Quartet. Size is " + array.length);
+        }
+        return new Quartet<X,X,X,X>(array[0],array[1],array[2],array[3]);
+    }
+
+    
+    public static <X> Quartet<X,X,X,X> fromCollection(final Collection<X> collection) {
+        if (collection == null) {
+            throw new IllegalArgumentException("Collection cannot be null");
+        }
+        if (collection.size() != 4) {
+            throw new IllegalArgumentException("Collection must have exactly 4 elements in order to create a Quartet. Size is " + collection.size());
+        }
+        final Iterator<X> iter = collection.iterator();
+        return new Quartet<X,X,X,X>(iter.next(),iter.next(),iter.next(),iter.next());
+    }
+    
+    
     
     
     public Quartet(

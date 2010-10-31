@@ -19,6 +19,9 @@
  */
 package org.javatuples;
 
+import java.util.Collection;
+import java.util.Iterator;
+
 public final class Unit<A> extends Tuple {
 
     private static final long serialVersionUID = -9113114724069537096L;
@@ -31,6 +34,31 @@ public final class Unit<A> extends Tuple {
     public static <A> Unit<A> with(final A value0) {
         return new Unit<A>(value0);
     }
+
+    
+    public static <X> Unit<X> fromArray(final X[] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("Array cannot be null");
+        }
+        if (array.length != 1) {
+            throw new IllegalArgumentException("Array must have exactly 1 element in order to create a Unit. Size is " + array.length);
+        }
+        return new Unit<X>(array[0]);
+    }
+
+    
+    public static <X> Unit<X> fromCollection(final Collection<X> collection) {
+        if (collection == null) {
+            throw new IllegalArgumentException("Collection cannot be null");
+        }
+        if (collection.size() != 1) {
+            throw new IllegalArgumentException("Collection must have exactly 1 element in order to create a Unit. Size is " + collection.size());
+        }
+        final Iterator<X> iter = collection.iterator();
+        return new Unit<X>(iter.next());
+    }
+    
+    
 
     
     public Unit(final A value0) {

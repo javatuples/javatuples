@@ -19,6 +19,9 @@
  */
 package org.javatuples;
 
+import java.util.Collection;
+import java.util.Iterator;
+
 public final class Pair<A,B> extends Tuple {
 
     private static final long serialVersionUID = 2438099850625502138L;
@@ -33,6 +36,32 @@ public final class Pair<A,B> extends Tuple {
     public static <A,B> Pair<A,B> with(final A value0, final B value1) {
         return new Pair<A,B>(value0,value1);
     }
+
+    
+    public static <X> Pair<X,X> fromArray(final X[] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("Array cannot be null");
+        }
+        if (array.length != 2) {
+            throw new IllegalArgumentException("Array must have exactly 2 elements in order to create a Pair. Size is " + array.length);
+        }
+        return new Pair<X,X>(array[0],array[1]);
+    }
+
+    
+    public static <X> Pair<X,X> fromCollection(final Collection<X> collection) {
+        if (collection == null) {
+            throw new IllegalArgumentException("Collection cannot be null");
+        }
+        if (collection.size() != 2) {
+            throw new IllegalArgumentException("Collection must have exactly 2 elements in order to create a Pair. Size is " + collection.size());
+        }
+        final Iterator<X> iter = collection.iterator();
+        return new Pair<X,X>(iter.next(),iter.next());
+    }
+    
+    
+    
     
     
     public Pair(

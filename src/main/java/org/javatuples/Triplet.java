@@ -19,6 +19,9 @@
  */
 package org.javatuples;
 
+import java.util.Collection;
+import java.util.Iterator;
+
 public final class Triplet<A,B,C> extends Tuple {
 
     private static final long serialVersionUID = -1877265551599483740L;
@@ -35,6 +38,32 @@ public final class Triplet<A,B,C> extends Tuple {
         return new Triplet<A,B,C>(value0,value1,value2);
     }
 
+    
+    public static <X> Triplet<X,X,X> fromArray(final X[] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("Array cannot be null");
+        }
+        if (array.length != 3) {
+            throw new IllegalArgumentException("Array must have exactly 3 elements in order to create a Triplet. Size is " + array.length);
+        }
+        return new Triplet<X,X,X>(array[0],array[1],array[2]);
+    }
+
+    
+    public static <X> Triplet<X,X,X> fromCollection(final Collection<X> collection) {
+        if (collection == null) {
+            throw new IllegalArgumentException("Collection cannot be null");
+        }
+        if (collection.size() != 3) {
+            throw new IllegalArgumentException("Collection must have exactly 3 elements in order to create a Triplet. Size is " + collection.size());
+        }
+        final Iterator<X> iter = collection.iterator();
+        return new Triplet<X,X,X>(iter.next(),iter.next(),iter.next());
+    }
+    
+
+    
+    
     
     
     public Triplet(
