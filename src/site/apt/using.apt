@@ -4,5 +4,135 @@
 
 Using javatuples
 
+* The tuple classes
 
+  There are ten tuple classes in javatuples:
+
+    * <<<Unit<A>>>> (1 element)
+    
+    * <<<Pair<A,B>>>> (2 elements)
+    
+    * <<<Triplet<A,B,C>>>> (3 elements)
+    
+    * <<<Quartet<A,B,C,D>>>> (4 elements)
+    
+    * <<<Quintet<A,B,C,D,E>>>> (5 elements)
+    
+    * <<<Sextet<A,B,C,D,E,F>>>> (6 elements)
+    
+    * <<<Septet<A,B,C,D,E,F,G>>>> (7 elements)
+    
+    * <<<Octet<A,B,C,D,E,F,G,H>>>> (8 elements)
+    
+    * <<<Ennead<A,B,C,D,E,F,G,H,I>>>> (9 elements)
+    
+    * <<<Decade<A,B,C,D,E,F,G,H,I,J>>>> (10 elements)
+
+  Plus a couple of very common 2-element tuple classes equivalent to <<<Pair>>>, just for
+  the sake of code semantics:
+    
+    * <<<KeyValue<A,B>>>>
+    
+    * <<<LabelValue<A,B>>>>
+  
+  All tuple classes are:
+    
+    * Typesafe
+    
+    * Immutable
+  
+    * Iterable
+    
+    * Serializable
+    
+    * Implementing <<<equals(...)>>> and <<<hashCode()>>>
+
+    * Implementing <<<toString()>>>
+
+
+* Creating tuples
+
+  Tuples can be instanced in a semantically elegant way, using the <<<with(...)>>> methods from each of the
+  tuple classes:
+  
+---
+    Pair<String,Integer> pair = Pair.with("hello", Integer.valueOf(23));
+    ...
+    Quintet<String,Integer,Double,String,String> quintet = 
+        Quintet.with("a", Integer.valueOf(3), Double.valueOf(34.2), "b", "c"); 
+---
+
+  Of course, constructors can also be used directly:
+  
+---
+    Pair<String,Integer> pair = new Pair<String,Integer>("hello", Integer.valueOf(23));
+    ...
+    Quintet<String,Integer,Double,String,String> quintet = 
+        new Quintet<String,Integer,Double,String,String>("a", Integer.valueOf(3), Double.valueOf(34.2), "b", "c"); 
+---
+
+* Getting values
+
+  Values can be retrieved from a tuple by using the specific method for its position:
+  
+---
+  Triplet<String,Integer,Double> triplet = ...
+  ...
+  Integer intVal = triplet.getValue1();
+---
+
+  Note that:
+  
+      * Value numbering starts with 0, so the getter for the first position will always 
+        be <<<getValue0()>>>.
+      
+      * A tuple object will only offer you methods for the specific number of positions it
+        holds (e.g. <<<Quartet>>> does not have a <<<getValue4()>>> method).
+        
+      * All <<<getValueX()>>> getters are typesafe, no cast needed. Thanks to the type 
+        parameterization of the tuple classes (the "<<<<A,B,C,D>>>>" in <<<Quartet<A,B,C,D>>>>) 
+        the compiler will know that <value0> is of type <<<A>>>, <value1> of type <<<B>>>, 
+        and so on.
+
+  There is also a <<<getValue(int pos)>>> method, but its use is not recommended, because
+  the compiler cannot know the type of the result beforehand and therefore you will need a cast:
+
+---
+  Triplet<String,Integer,Double> triplet = ...
+  ...
+  Integer intVal = (Integer) triplet.getValue(1);
+---
+  
+
+* Setting new values
+
+  In order to set new values for specific positions of a tuple, you can use the <<<setAtX(...)>>>
+  setter methods:
+  
+---
+  Triplet<String,Integer,Double> triplet = ...
+  ...
+  triplet = triplet.setAt2(Double.valueOf(245.21));
+---
+
+  <<Important: tuples are immutable>>. This means that you will have to collect the return
+  value of your <<<setAtX(...)>>> calls, and also that you will be able to change the type
+  of a position in the tuple by changing the object that lives in that position:
+  
+---
+  Triplet<String,Integer,Double> triplet = ...
+  ...
+  Triplet<String,Integer,String> otherTriplet = triplet.setAt2("North Atlantic");
+---
+  
+
+* Adding or removing elements
+
+  New elements can be added to a tuple, converting it in another tuple. If you 
+
+* Converting to/from collections or arrays
+
+* Checking contents
+
+   
   

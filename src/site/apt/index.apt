@@ -6,32 +6,152 @@
 
 javatuples
 
-  javatuples is one of the simplest java libraries ever made. Its concept is very simple: providing
-  a set of <tuple> java classes. Specifically, from 1-element tuples (<<<Unit>>>s) to ten-element 
-  tuples (<<<Decade>>>s).
+  javatuples is one of the simplest java libraries ever made. Its aim is to provide
+  a set of java classes that allow you to work with <tuple>s.
   
   <<Tuples? What are tuples?>>
   
-  A tuple is just a sequence of data that do not necessarily have relations of any kind among them.
-  For example: <<<[23, "Saturn", java.sql.Connection@li734s]>>> is a tuple of three elements: a
-  <triplet> containing an integer, a String, and a JDBC Connection object. As simple as that.
+  A tuple is just a sequence of objects that do not necessarily relate to each other in  
+  any way.
+  For example: <<<[23, "Saturn", java.sql.Connection@li734s]>>> can be considered a tuple of 
+  three elements (a <triplet>) containing an Integer, a String, and a JDBC Connection object.
+  As simple as that.
   
-  But very probably, you've already used tuples before like:
+  Very probably, you've already written tuple classes for some of your projects, like:
   
 ---
-    public Pair<String,Integer> doSomething() {
+    public Triplet<Integer,Integer,Integer> getYearMonthDay() {
         ....
 ---
+  
+  ...or...
+  
+---
+    LabelValue<String,Operator> operatorLabelValue = 
+        new LabelValue<String,Operator>(">=", Operator.MORE_OR_EQUAL_TO);
+---
 
-  That <<<Pair<A,B>>>> class is something you have probably programmed yourself in a variety of
-  projects, in order to being able to do things like returning more than one value from a single
-  method.
+  <<<Triplet<A,B,C>>>> and <<<LabelValue<A,B>>>> are both tuple classes.
   
-  And what about:
+  <<javatuples>> offers you tuple classes from one to ten elements:
+
+    * <<<Unit<A>>>> (1 element)
+    
+    * <<<Pair<A,B>>>> (2 elements)
+    
+    * <<<Triplet<A,B,C>>>> (3 elements)
+    
+    * <<<Quartet<A,B,C,D>>>> (4 elements)
+    
+    * <<<Quintet<A,B,C,D,E>>>> (5 elements)
+    
+    * <<<Sextet<A,B,C,D,E,F>>>> (6 elements)
+    
+    * <<<Septet<A,B,C,D,E,F,G>>>> (7 elements)
+    
+    * <<<Octet<A,B,C,D,E,F,G,H>>>> (8 elements)
+    
+    * <<<Ennead<A,B,C,D,E,F,G,H,I>>>> (9 elements)
+    
+    * <<<Decade<A,B,C,D,E,F,G,H,I,J>>>> (10 elements)
+
+  Plus a couple of very common 2-element tuple classes equivalent to <<<Pair>>>, just for
+  the sake of code semantics:
+    
+    * <<<KeyValue<A,B>>>>
+    
+    * <<<LabelValue<A,B>>>>
+  
+  All tuple classes are:
+    
+    * Typesafe
+    
+    * Immutable
+  
+    * Iterable
+    
+    * Serializable
+    
+    * Implementing <<<equals(...)>>> and <<<hashCode()>>>
+
+    * Implementing <<<toString()>>>
+
+
+
+* Tuples vs. Lists/Arrays
+    
+  So, how do these <"tuples"> compare with other common structures like lists or arrays?
+  
+    * Lists (<<<List<X>>>>) and arrays (<<<X[]>>>):
+     
+      * Can contain an undefined number of elements.
+      
+      * All elements must be instances of <<<X>>>.
+      
+    * Tuples:
+    
+      * Can only contain a specific number of elements.
+      
+      * Elements can be of completely different type and nature...
+      
+      * ...and yet, tuples will be completely typesafe.
+
+
+* Some example code
+
+  Let's say we have some objects...
   
 ---
-    final LabelValue<String,Integer> labelVal = 
-        new LabelValue<String,Integer>("age", Integer.valueOf(63));
+    ...
+    String str = ...;
+    Integer integ = ...;
+    Double[] doubleArray = ...;
+    ...
+---
+    
+  ...and we want to create a 3-element tuple with them:
+  
+---
+    Triplet<String,Integer,Double[]> triplet = Triplet.with(str, integ, doubleArray); 
+---
+
+  Now how do we get our data back? easy:
+    
+---
+    ...
+    String myStr = triplet.getValue0();
+    Integer myInteg = triplet.getValue1();
+    Double[] myDoubleArray = triplet.getValue2();
+    ...
 ---
   
-  The omnipresent <<<LabelValue>>> class is something needed in a number of situations
+  Note there are no cast operations in the code above, because tuples allow <<<get>>> methods 
+  to be completely typesafe.
+  
+  And what if we want to add a Boolean to the tuple? That would turn our <triplet> into a <quartet>:
+  
+---
+    Quartet<String,Integer,Double[],Boolean> quartet = triplet.add(myBoolean); 
+---
+
+  Many useful methods are also implemented. Some examples:
+
+---
+    ...
+    int i = quartet.indexOf(someValue);
+    ...
+    Object[] array = quartet.toArray();
+    ...
+    if (quartet.contains(someOtherValue)) {
+       ...
+---
+
+  Tuples are also iterable, like collections and arrays:
+  
+---
+    for (Object element : quartet) {
+       ...
+    }
+---
+
+  Have a look at the {{{using.html}Using javatuples}} page for more features and code examples.  

@@ -72,6 +72,38 @@ public class Test extends TestCase {
         System.out.println(sextetUnSer);
         
         
+        
+        String str = null;
+        Integer integ = null;
+        Double[] doubleArray = null;
+        
+        Triplet<String,Integer,Double[]> triplet = Triplet.with(str, integ, doubleArray); 
+        
+        System.out.println(triplet);
+
+        
+        Pair<String,Integer> pair1 = Pair.with("hello", Integer.valueOf(23));
+        Quintet<String,Integer,Double,String,String> quintet = 
+            Quintet.with("a", Integer.valueOf(3), Double.valueOf(34.2), "b", "c"); 
+
+        Pair<String,Integer> pair2 = new Pair<String,Integer>("hello", Integer.valueOf(23));
+        Quintet<String,Integer,Double,String,String> quintet2 = 
+            new Quintet<String,Integer,Double,String,String>("a", Integer.valueOf(3), Double.valueOf(34.2), "b", "c"); 
+
+        System.out.println(pair1);
+        System.out.println(pair2);
+        System.out.println(quintet);
+        System.out.println(quintet2);
+        
+        try {
+            quintet2.getValue(8);
+            assertTrue(false);
+        } catch (IllegalArgumentException e) {
+            // OK
+        } catch (Exception e) {
+            throw e;
+        }
+        
     }
     
 }

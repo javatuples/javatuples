@@ -24,7 +24,7 @@ import java.util.Iterator;
 
 public final class KeyValue<A,B> extends Tuple {
 
-    private static final long serialVersionUID = 5055574980300695706L;
+    private static final long serialVersionUID = 3460957157833872509L;
 
     private static final int SIZE = 2;
 

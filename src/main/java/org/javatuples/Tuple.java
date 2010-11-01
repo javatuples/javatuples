@@ -47,6 +47,16 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
     public abstract int getSize();
 
     
+    public final Object getValue(final int pos) {
+        if (pos >= getSize()) {
+            throw new IllegalArgumentException(
+                    "Cannot retrieve position " + pos + " in " + this.getClass().getSimpleName() + 
+                    ". Positions for this class start with 0 and end with " + (getSize() - 1));
+        }
+        return this.valueArray[pos];
+    }
+    
+    
     public final Iterator<Object> iterator() {
         return this.valueList.iterator();
     }
