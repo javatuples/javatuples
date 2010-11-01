@@ -27,6 +27,17 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+
+/**
+ * <p>
+ * Abstract base class for all tuple classes.
+ * </p> 
+ * 
+ * @since 1.0
+ * 
+ * @author Daniel Fern&aacute;ndez
+ *
+ */
 public abstract class Tuple implements Iterable<Object>, Serializable {
 
     private static final long serialVersionUID = 5431085632328343101L;
@@ -43,10 +54,27 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
         this.valueList = Arrays.asList(values);
     }
     
-    
+
+    /**
+     * <p>
+     * Return the size of the tuple.
+     * </p>
+     * 
+     * @return the size of the tuple.
+     */
     public abstract int getSize();
 
     
+    /**
+     * <p>
+     * Get the value at a specific position in the tuple. This method
+     * has to return object, so using it you will lose the type-safety you 
+     * get with the <tt>getValueX()</tt> methods.
+     * </p>
+     * 
+     * @param pos the position of the value to be retrieved.
+     * @return the value
+     */
     public final Object getValue(final int pos) {
         if (pos >= getSize()) {
             throw new IllegalArgumentException(
@@ -56,6 +84,7 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
         return this.valueArray[pos];
     }
     
+
     
     public final Iterator<Object> iterator() {
         return this.valueList.iterator();

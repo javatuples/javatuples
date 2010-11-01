@@ -22,6 +22,17 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+/**
+ * <p>
+ * A tuple of two elements, with positions 0 and 1 renamed as "label" and 
+ * "value", respectively.
+ * </p> 
+ * 
+ * @since 1.0
+ * 
+ * @author Daniel Fern&aacute;ndez
+ *
+ */
 public final class LabelValue<A,B> extends Tuple {
 
     private static final long serialVersionUID = 5055574980300695706L;
@@ -38,6 +49,15 @@ public final class LabelValue<A,B> extends Tuple {
     }
 
     
+    /**
+     * <p>
+     * Create tuple from array. Array has to have exactly two elements.
+     * </p>
+     * 
+     * @param <X> the array component type 
+     * @param array the array to be converted to a tuple
+     * @return the tuple
+     */
     public static <X> LabelValue<X,X> fromArray(final X[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Array cannot be null");

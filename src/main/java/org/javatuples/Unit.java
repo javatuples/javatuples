@@ -22,6 +22,16 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+/**
+ * <p>
+ * A tuple of one element.
+ * </p> 
+ * 
+ * @since 1.0
+ * 
+ * @author Daniel Fern&aacute;ndez
+ *
+ */
 public final class Unit<A> extends Tuple {
 
     private static final long serialVersionUID = -9113114724069537096L;
@@ -36,6 +46,15 @@ public final class Unit<A> extends Tuple {
     }
 
     
+    /**
+     * <p>
+     * Create tuple from array. Array has to have exactly one element.
+     * </p>
+     * 
+     * @param <X> the array component type 
+     * @param array the array to be converted to a tuple
+     * @return the tuple
+     */
     public static <X> Unit<X> fromArray(final X[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Array cannot be null");
@@ -46,7 +65,16 @@ public final class Unit<A> extends Tuple {
         return new Unit<X>(array[0]);
     }
 
-    
+
+    /**
+     * <p>
+     * Create tuple from collection. Collection has to have exactly one element.
+     * </p>
+     * 
+     * @param <X> the collection component type 
+     * @param collection the collection to be converted to a tuple
+     * @return the tuple
+     */
     public static <X> Unit<X> fromCollection(final Collection<X> collection) {
         if (collection == null) {
             throw new IllegalArgumentException("Collection cannot be null");

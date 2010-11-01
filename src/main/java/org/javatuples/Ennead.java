@@ -22,6 +22,16 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+/**
+ * <p>
+ * A tuple of nine elements.
+ * </p> 
+ * 
+ * @since 1.0
+ * 
+ * @author Daniel Fern&aacute;ndez
+ *
+ */
 public final class Ennead<A,B,C,D,E,F,G,H,I> extends Tuple {
 
     private static final long serialVersionUID = -4782141390960730966L;
@@ -45,6 +55,15 @@ public final class Ennead<A,B,C,D,E,F,G,H,I> extends Tuple {
     }
 
     
+    /**
+     * <p>
+     * Create tuple from array. Array has to have exactly nine elements.
+     * </p>
+     * 
+     * @param <X> the array component type 
+     * @param array the array to be converted to a tuple
+     * @return the tuple
+     */
     public static <X> Ennead<X,X,X,X,X,X,X,X,X> fromArray(final X[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Array cannot be null");
@@ -58,6 +77,15 @@ public final class Ennead<A,B,C,D,E,F,G,H,I> extends Tuple {
     }
 
     
+    /**
+     * <p>
+     * Create tuple from collection. Collection has to have exactly nine elements.
+     * </p>
+     * 
+     * @param <X> the collection component type 
+     * @param collection the collection to be converted to a tuple
+     * @return the tuple
+     */
     public static <X> Ennead<X,X,X,X,X,X,X,X,X> fromCollection(final Collection<X> collection) {
         if (collection == null) {
             throw new IllegalArgumentException("Collection cannot be null");

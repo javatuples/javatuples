@@ -22,6 +22,16 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+/**
+ * <p>
+ * A tuple of three elements.
+ * </p> 
+ * 
+ * @since 1.0
+ * 
+ * @author Daniel Fern&aacute;ndez
+ *
+ */
 public final class Triplet<A,B,C> extends Tuple {
 
     private static final long serialVersionUID = -1877265551599483740L;
@@ -39,6 +49,15 @@ public final class Triplet<A,B,C> extends Tuple {
     }
 
     
+    /**
+     * <p>
+     * Create tuple from array. Array has to have exactly three elements.
+     * </p>
+     * 
+     * @param <X> the array component type 
+     * @param array the array to be converted to a tuple
+     * @return the tuple
+     */
     public static <X> Triplet<X,X,X> fromArray(final X[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Array cannot be null");
@@ -50,6 +69,15 @@ public final class Triplet<A,B,C> extends Tuple {
     }
 
     
+    /**
+     * <p>
+     * Create tuple from collection. Collection has to have exactly three elements.
+     * </p>
+     * 
+     * @param <X> the collection component type 
+     * @param collection the collection to be converted to a tuple
+     * @return the tuple
+     */
     public static <X> Triplet<X,X,X> fromCollection(final Collection<X> collection) {
         if (collection == null) {
             throw new IllegalArgumentException("Collection cannot be null");

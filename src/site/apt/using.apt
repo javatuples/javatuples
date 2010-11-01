@@ -102,6 +102,10 @@ Using javatuples
     ...
     Integer intVal = (Integer) triplet.getValue(1);
 ---
+
+   Note that classes <<KeyValue>> and <<LabelValue>> have their 
+   <<<getValue0()>>>/<<<getValue1()>>> methods renamed as <<<getKey()>>>/<<<getValue()>>> 
+   and <<<getLabel()>>>/<<<getValue()>>>, respectively.
   
 
 * Setting new values
