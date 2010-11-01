@@ -55,21 +55,6 @@
     </faq>
 
   </part>
-  
-
-  <part id="general">
-    <title>General</title>
-    
-    <faq id="what-is-javatuples-useful-for">
-      <question>What is javatuples useful for?</question>
-      <answer>
-        <p>
-          ...
-        </p>
-      </answer>
-    </faq>
-    
-  </part>
 
     
 </faqs>
