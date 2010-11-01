@@ -6,7 +6,7 @@
  
      http://maven.apache.org
 
- Build and install the project executing, from the op4j
+ Build and install the project executing, from the javatuples
  project root folder:
  
      mvn clean:clean install
