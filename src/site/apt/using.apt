@@ -128,9 +128,91 @@ Using javatuples
 
 * Adding or removing elements
 
-  New elements can be added to a tuple, converting it in another tuple. If you 
+  New elements can be added to a tuple, converting it in a different tuple. 
+  
+  For example, if you add a <<<String>>> to a <<<Triplet<String,Integer,Double>>>>, you
+  will turn it into a <<<Quartet<String,Integer,Double,String>>>>:
+  
+---
+  Triplet<String,Integer,Double> triplet = ...
+  ...
+  Quartet<String,Integer,Double,String> quartet = triplet.add("South Pacific");
+---
+
+  By default, new elements are added at the end of the tuple. But you can also add elements
+  in other positions of the tuple by using the <<<addAtX(...)>>> methods:
+  
+---
+  Triplet<String,Integer,Double> triplet = ...
+  ...
+  Quartet<String,Integer,String,Double> quartet = triplet.addAt2("Mediterranean");
+---
+
+  You can also add more than one element...
+  
+---
+  Triplet<String,Integer,Double> triplet = ...
+  ...
+  Quintet<String,Integer,String,String,Double> quintet = triplet.addAt2("Red Sea", "Caspian");
+---
+
+  ...or even other tuples:
+  
+---
+  Triplet<String,Integer,Double> triplet1 = ...
+  Triplet<Byte,String[],String> triplet2 = ...
+  ...
+  Sextet<String,Integer,Byte,String[],String,Double> sextet = triplet1.addAt2(triplet2);
+---
+
+  Removing elements is just as easy, and it will also transform your tuple. If you remove
+  an element from a <<<Triplet>>>, you will get a <<<Pair>>>:
+  
+---
+  Triplet<String,Integer,Double> triplet = ...
+  ...
+  Pair<String,Double> pair = triplet.removeFrom1();
+---
+
 
 * Converting to/from collections or arrays
+
+  A tuple can be easily converted to a list or an array, but you will lose your
+  type-safety and end up with a <<<List<Object>>>> or an <<<Object[]>>>:
+
+---
+  Triplet<String,Integer,Double> triplet = ...
+  ...
+  List<Object> list = triplet.toList();
+  ...
+  Object[] array = triplet.toArray();
+---
+
+  Inversely, you can obtain a tuple from both a collection or an array:
+  
+---
+  String[] array = ...
+  ...
+  Quartet<String,String,String,String> quartet = Quartet.fromArray(array); 
+---
+
+  Note that your tuple will have all its elements set to the component type of the array 
+  (<<<String>>>, in this case). Also, note that...
+
+---
+  String[] array = new String[] { "a", "b", "c", "d", "e" };
+  ...
+  // Array has five elements: will raise an exception trying to create a quartet!!
+  Quartet<String,String,String,String> quartet = Quartet.fromArray(array); 
+---
+
+  ...will raise the following exception:
+  
+---
+java.lang.IllegalArgumentException: Array must have exactly 4 elements in order to create a Quartet. Size is 5
+	at ...
+---
+
 
 * Checking contents
 
