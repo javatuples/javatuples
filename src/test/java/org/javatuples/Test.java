@@ -103,10 +103,6 @@ public class Test extends TestCase {
         } catch (Exception e) {
             throw e;
         }
-
-        String[] array = new String[] { "a", "b", "c", "d", "e" };
-        // Array has five elements: will raise an exception trying!!
-        Quartet<String,String,String,String> quartet = Quartet.fromArray(array); 
         
     }
     
