@@ -30,8 +30,14 @@ javatuples
     LabelValue<String,Operator> operatorLabelValue = 
         new LabelValue<String,Operator>(">=", Operator.MORE_OR_EQUAL_TO);
 ---
+  
+  ...or...
+  
+---
+    private Map<Pair<String,Integer>,Object> objectsByTwoKeys = ...
+---
 
-  <<<Triplet<A,B,C>>>> and <<<LabelValue<A,B>>>> are both tuple classes.
+  <<<Triplet<A,B,C>>>>, <<<LabelValue<A,B>>>> and <<<Pair<A,B>>>> are all tuple classes.
   
   <<javatuples>> offers you tuple classes from one to ten elements:
 
