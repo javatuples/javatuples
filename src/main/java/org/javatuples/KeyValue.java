@@ -22,6 +22,9 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.javatuples.valueintf.IValueKey;
+import org.javatuples.valueintf.IValueValue;
+
 /**
  * <p>
  * A tuple of two elements, with positions 0 and 1 renamed as "key" and 
@@ -33,7 +36,10 @@ import java.util.Iterator;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class KeyValue<A,B> extends Tuple {
+public final class KeyValue<A,B> 
+        extends Tuple
+        implements IValueKey<A>, 
+                   IValueValue<B> {
 
     private static final long serialVersionUID = 3460957157833872509L;
 

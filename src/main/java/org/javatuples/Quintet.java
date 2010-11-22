@@ -22,6 +22,12 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.javatuples.valueintf.IValue0;
+import org.javatuples.valueintf.IValue1;
+import org.javatuples.valueintf.IValue2;
+import org.javatuples.valueintf.IValue3;
+import org.javatuples.valueintf.IValue4;
+
 /**
  * <p>
  * A tuple of five elements.
@@ -32,7 +38,13 @@ import java.util.Iterator;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Quintet<A,B,C,D,E> extends Tuple {
+public final class Quintet<A,B,C,D,E>
+        extends Tuple
+        implements IValue0<A>,
+                   IValue1<B>,
+                   IValue2<C>,
+                   IValue3<D>,
+                   IValue4<E> {
 
     private static final long serialVersionUID = -1579008485383872628L;
 

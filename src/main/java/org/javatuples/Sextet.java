@@ -22,6 +22,13 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.javatuples.valueintf.IValue0;
+import org.javatuples.valueintf.IValue1;
+import org.javatuples.valueintf.IValue2;
+import org.javatuples.valueintf.IValue3;
+import org.javatuples.valueintf.IValue4;
+import org.javatuples.valueintf.IValue5;
+
 /**
  * <p>
  * A tuple of six elements.
@@ -32,7 +39,14 @@ import java.util.Iterator;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Sextet<A,B,C,D,E,F> extends Tuple {
+public final class Sextet<A,B,C,D,E,F>
+        extends Tuple
+        implements IValue0<A>,
+                   IValue1<B>,
+                   IValue2<C>,
+                   IValue3<D>,
+                   IValue4<E>,
+                   IValue5<F> {
 
     private static final long serialVersionUID = -367678052827219823L;
 

@@ -22,6 +22,9 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.javatuples.valueintf.IValue0;
+import org.javatuples.valueintf.IValue1;
+
 /**
  * <p>
  * A tuple of two elements.
@@ -32,7 +35,10 @@ import java.util.Iterator;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Pair<A,B> extends Tuple {
+public final class Pair<A,B> 
+        extends Tuple
+        implements IValue0<A>,
+                   IValue1<B> {
 
     private static final long serialVersionUID = 2438099850625502138L;
 

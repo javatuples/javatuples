@@ -22,6 +22,8 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.javatuples.valueintf.IValue0;
+
 /**
  * <p>
  * A tuple of one element.
@@ -32,7 +34,9 @@ import java.util.Iterator;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Unit<A> extends Tuple {
+public final class Unit<A> 
+        extends Tuple
+        implements IValue0<A> {
 
     private static final long serialVersionUID = -9113114724069537096L;
 

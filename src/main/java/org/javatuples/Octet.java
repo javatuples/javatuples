@@ -22,6 +22,15 @@ package org.javatuples;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.javatuples.valueintf.IValue0;
+import org.javatuples.valueintf.IValue1;
+import org.javatuples.valueintf.IValue2;
+import org.javatuples.valueintf.IValue3;
+import org.javatuples.valueintf.IValue4;
+import org.javatuples.valueintf.IValue5;
+import org.javatuples.valueintf.IValue6;
+import org.javatuples.valueintf.IValue7;
+
 /**
  * <p>
  * A tuple of eight elements.
@@ -32,7 +41,16 @@ import java.util.Iterator;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public final class Octet<A,B,C,D,E,F,G,H> extends Tuple {
+public final class Octet<A,B,C,D,E,F,G,H>
+        extends Tuple
+        implements IValue0<A>,
+                   IValue1<B>,
+                   IValue2<C>,
+                   IValue3<D>,
+                   IValue4<E>,
+                   IValue5<F>,
+                   IValue6<G>,
+                   IValue7<H> {
 
     private static final long serialVersionUID = -1187955276020306879L;
 
