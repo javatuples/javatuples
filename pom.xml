@@ -24,7 +24,7 @@
   <groupId>org.javatuples</groupId>
   <artifactId>javatuples</artifactId>
   <packaging>jar</packaging>
-  <version>1.1</version>
+  <version>1.2-SNAPSHOT</version>
   <name>javatuples</name>
   <url>http://www.javatuples.org</url>
 
@@ -44,9 +44,9 @@
   </organization>
   
   <scm>
-    <url>scm:svn:http://java-tuples.svn.sourceforge.net/svnroot/java-tuples/tags/javatuples/javatuples-1.1</url>
-    <connection>scm:svn:https://java-tuples.svn.sourceforge.net/svnroot/java-tuples/tags/javatuples/javatuples-1.1</connection>
-    <developerConnection>scm:svn:https://java-tuples.svn.sourceforge.net/svnroot/java-tuples/tags/javatuples/javatuples-1.1</developerConnection>
+    <url>scm:svn:http://java-tuples.svn.sourceforge.net/svnroot/java-tuples/trunk/javatuples</url>
+    <connection>scm:svn:https://java-tuples.svn.sourceforge.net/svnroot/java-tuples/trunk/javatuples</connection>
+    <developerConnection>scm:svn:https://java-tuples.svn.sourceforge.net/svnroot/java-tuples/trunk/javatuples</developerConnection>
   </scm>
   
   <developers>
