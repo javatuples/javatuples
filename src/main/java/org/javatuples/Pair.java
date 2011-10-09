@@ -84,14 +84,50 @@ public final class Pair<A,B>
      * @return the tuple
      */
     public static <X> Pair<X,X> fromCollection(final Collection<X> collection) {
-        if (collection == null) {
-            throw new IllegalArgumentException("Collection cannot be null");
+        return fromIterable(collection);
+    }
+
+    
+    /**
+     * <p>
+     * Create tuple from iterable. Iterable has to have exactly two elements.
+     * </p>
+     * 
+     * @param <X> the iterable component type 
+     * @param iterable the iterable to be converted to a tuple
+     * @return the tuple
+     */
+    public static <X> Pair<X,X> fromIterable(final Iterable<X> iterable) {
+        
+        if (iterable == null) {
+            throw new IllegalArgumentException("Iterable cannot be null");
         }
-        if (collection.size() != 2) {
-            throw new IllegalArgumentException("Collection must have exactly 2 elements in order to create a Pair. Size is " + collection.size());
+
+        boolean tooFewElements = false; 
+        
+        X element0 = null;
+        X element1 = null;
+        
+        final Iterator<X> iter = iterable.iterator();
+        
+        if (iter.hasNext()) {
+            element0 = iter.next();
+        } else {
+            tooFewElements = true;
         }
-        final Iterator<X> iter = collection.iterator();
-        return new Pair<X,X>(iter.next(),iter.next());
+        
+        if (iter.hasNext()) {
+            element1 = iter.next();
+        } else {
+            tooFewElements = true;
+        }
+        
+        if (iter.hasNext() || tooFewElements) {
+            throw new IllegalArgumentException("Iterable must have exactly 2 elements in order to create a Pair.");
+        }
+        
+        return new Pair<X,X>(element0, element1);
+        
     }
     
     

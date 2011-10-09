@@ -20,7 +20,9 @@
 package org.javatuples;
 
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import junit.framework.TestCase;
 
@@ -37,11 +39,18 @@ public class Test extends TestCase {
         final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade =
             Decade.with(Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3), Integer.valueOf(4), Integer.valueOf(5), Integer.valueOf(6), Integer.valueOf(7), Integer.valueOf(8), Integer.valueOf(9), Integer.valueOf(10));
 
+        List<Integer> decadeList = new ArrayList<Integer>();
+        
         for (final Object value : decade) {
+            decadeList.add((Integer)value);
             System.out.println(value);
         }
+        
+        final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade2 = 
+            Decade.fromCollection(decadeList); 
             
         assertTrue(true);
+        assertEquals(decade, decade2);
 
         
         final Ennead<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> ennead =

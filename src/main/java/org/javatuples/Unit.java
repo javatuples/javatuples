@@ -89,6 +89,42 @@ public final class Unit<A>
         final Iterator<X> iter = collection.iterator();
         return new Unit<X>(iter.next());
     }
+
+    
+    /**
+     * <p>
+     * Create tuple from iterable. Iterable has to have exactly one element.
+     * </p>
+     * 
+     * @param <X> the iterable component type 
+     * @param iterable the iterable to be converted to a tuple
+     * @return the tuple
+     */
+    public static <X> Unit<X> fromIterable(final Iterable<X> iterable) {
+        
+        if (iterable == null) {
+            throw new IllegalArgumentException("Iterable cannot be null");
+        }
+
+        boolean tooFewElements = false; 
+        
+        X element0 = null;
+        
+        final Iterator<X> iter = iterable.iterator();
+        
+        if (iter.hasNext()) {
+            element0 = iter.next();
+        } else {
+            tooFewElements = true;
+        }
+        
+        if (iter.hasNext() || tooFewElements) {
+            throw new IllegalArgumentException("Iterable must have exactly 1 element in order to create a Unit.");
+        }
+        
+        return new Unit<X>(element0);
+        
+    }
     
     
 
