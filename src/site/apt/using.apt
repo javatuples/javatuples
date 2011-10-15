@@ -45,7 +45,7 @@ Using javatuples
     
     * Serializable
 
-    * Comparable (implements <<<Comparable&lt;Tuple&gt;>>>)
+    * Comparable (implements <<<Comparable<Tuple>>>>)
     
     * Implementing <<<equals(...)>>> and <<<hashCode()>>>
 
