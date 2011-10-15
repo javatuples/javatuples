@@ -71,6 +71,16 @@ Using javatuples
         new Quintet<String,Integer,Double,String,String>("a", Integer.valueOf(3), Double.valueOf(34.2), "b", "c"); 
 ---
 
+  You can also create tuples from collections or --more generally--, any iterable:
+
+---
+    Quintet<String,String,String,String,String> quintet = Quintet.fromCollection(myCollectionWith5Elements);
+    ...
+    // Retrieve three values from an iterable starting at a specific index
+    Triplet<Integer,Integer,Integer> triplet = Triplet.fromIterable(lotsOfInts, 7);
+---
+
+
 * Getting values
 
   Values can be retrieved from a tuple by using the specific method for its position:

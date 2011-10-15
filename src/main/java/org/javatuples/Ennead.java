@@ -111,6 +111,7 @@ public final class Ennead<A,B,C,D,E,F,G,H,I>
     }
 
     
+
     /**
      * <p>
      * Create tuple from iterable. Iterable has to have exactly nine elements.
@@ -121,6 +122,29 @@ public final class Ennead<A,B,C,D,E,F,G,H,I>
      * @return the tuple
      */
     public static <X> Ennead<X,X,X,X,X,X,X,X,X> fromIterable(final Iterable<X> iterable) {
+        return fromIterable(iterable, 0, true);
+    }
+
+    
+    
+    /**
+     * <p>
+     * Create tuple from iterable, starting from the specified index. Iterable
+     * can have more (or less) elements than the tuple to be created.
+     * </p>
+     * 
+     * @param <X> the iterable component type 
+     * @param iterable the iterable to be converted to a tuple
+     * @return the tuple
+     */
+    public static <X> Ennead<X,X,X,X,X,X,X,X,X> fromIterable(final Iterable<X> iterable, int index) {
+        return fromIterable(iterable, index, false);
+    }
+    
+
+    
+
+    private static <X> Ennead<X,X,X,X,X,X,X,X,X> fromIterable(final Iterable<X> iterable, int index, final boolean exactSize) {
         
         if (iterable == null) {
             throw new IllegalArgumentException("Iterable cannot be null");
@@ -139,6 +163,16 @@ public final class Ennead<A,B,C,D,E,F,G,H,I>
         X element8 = null;
         
         final Iterator<X> iter = iterable.iterator();
+        
+        int i = 0;
+        while (i < index) {
+            if (iter.hasNext()) {
+                iter.next();
+            } else {
+                tooFewElements = true;
+            }
+            i++;
+        }
         
         if (iter.hasNext()) {
             element0 = iter.next();
@@ -194,8 +228,12 @@ public final class Ennead<A,B,C,D,E,F,G,H,I>
             tooFewElements = true;
         }
         
-        if (iter.hasNext() || tooFewElements) {
-            throw new IllegalArgumentException("Iterable must have exactly 9 elements in order to create an Ennead.");
+        if (tooFewElements && exactSize) {
+            throw new IllegalArgumentException("Not enough elements for creating an Ennead (9 needed)");
+        }
+        
+        if (iter.hasNext() && exactSize) {
+            throw new IllegalArgumentException("Iterable must have exactly 9 available elements in order to create an Ennead.");
         }
         
         return new Ennead<X,X,X,X,X,X,X,X,X>(
@@ -216,7 +254,7 @@ public final class Ennead<A,B,C,D,E,F,G,H,I>
             final G value6,
             final H value7,
             final I value8) {
-        super(SIZE, value0, value1, value2, value3, value4, value5, value6, value7, value8);
+        super(value0, value1, value2, value3, value4, value5, value6, value7, value8);
         this.val0 = value0;
         this.val1 = value1;
         this.val2 = value2;

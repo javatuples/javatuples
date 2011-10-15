@@ -49,8 +49,33 @@ public class Test extends TestCase {
         final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade2 = 
             Decade.fromCollection(decadeList); 
             
-        assertTrue(true);
         assertEquals(decade, decade2);
+        
+        final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade3 = 
+            Decade.fromIterable(decadeList);
+        
+        assertEquals(decade, decade3);
+        
+        final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade4 = 
+            Decade.fromIterable(decadeList, 0);
+        
+        assertEquals(decade, decade4);
+        
+        decadeList.add(Integer.valueOf(100));
+        
+        final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade5 = 
+            Decade.fromIterable(decadeList, 0);
+        
+        assertEquals(decade, decade5);
+
+        
+        final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade100 =
+            Decade.with(Integer.valueOf(2), Integer.valueOf(3), Integer.valueOf(4), Integer.valueOf(5), Integer.valueOf(6), Integer.valueOf(7), Integer.valueOf(8), Integer.valueOf(9), Integer.valueOf(10), Integer.valueOf(100));
+        
+        final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade6 = 
+            Decade.fromIterable(decadeList, 1);
+        
+        assertEquals(decade100, decade6);
 
         
         final Ennead<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> ennead =

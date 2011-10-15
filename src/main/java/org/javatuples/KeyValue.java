@@ -80,7 +80,20 @@ public final class KeyValue<A,B>
     }
 
     
+    
     public static <X> KeyValue<X,X> fromIterable(final Iterable<X> iterable) {
+        return fromIterable(iterable, 0, true);
+    }
+
+    
+    
+    public static <X> KeyValue<X,X> fromIterable(final Iterable<X> iterable, int index) {
+        return fromIterable(iterable, index, false);
+    }
+
+    
+    
+    private static <X> KeyValue<X,X> fromIterable(final Iterable<X> iterable, int index, final boolean exactSize) {
         
         if (iterable == null) {
             throw new IllegalArgumentException("Iterable cannot be null");
@@ -92,6 +105,16 @@ public final class KeyValue<A,B>
         X element1 = null;
         
         final Iterator<X> iter = iterable.iterator();
+        
+        int i = 0;
+        while (i < index) {
+            if (iter.hasNext()) {
+                iter.next();
+            } else {
+                tooFewElements = true;
+            }
+            i++;
+        }
         
         if (iter.hasNext()) {
             element0 = iter.next();
@@ -105,8 +128,12 @@ public final class KeyValue<A,B>
             tooFewElements = true;
         }
         
-        if (iter.hasNext() || tooFewElements) {
-            throw new IllegalArgumentException("Iterable must have exactly 2 elements in order to create a KeyValue.");
+        if (tooFewElements && exactSize) {
+            throw new IllegalArgumentException("Not enough elements for creating a KeyValue (2 needed)");
+        }
+        
+        if (iter.hasNext() && exactSize) {
+            throw new IllegalArgumentException("Iterable must have exactly 2 available elements in order to create a KeyValue.");
         }
         
         return new KeyValue<X,X>(element0, element1);
@@ -117,7 +144,7 @@ public final class KeyValue<A,B>
     public KeyValue(
             final A key, 
             final B value) {
-        super(SIZE, key, value);
+        super(key, value);
         this.key = key;
         this.value = value;
     }

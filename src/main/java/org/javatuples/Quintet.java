@@ -98,6 +98,7 @@ public final class Quintet<A,B,C,D,E>
     }
 
     
+    
     /**
      * <p>
      * Create tuple from iterable. Iterable has to have exactly five elements.
@@ -108,6 +109,29 @@ public final class Quintet<A,B,C,D,E>
      * @return the tuple
      */
     public static <X> Quintet<X,X,X,X,X> fromIterable(final Iterable<X> iterable) {
+        return fromIterable(iterable, 0, true);
+    }
+
+    
+    
+    /**
+     * <p>
+     * Create tuple from iterable, starting from the specified index. Iterable
+     * can have more (or less) elements than the tuple to be created.
+     * </p>
+     * 
+     * @param <X> the iterable component type 
+     * @param iterable the iterable to be converted to a tuple
+     * @return the tuple
+     */
+    public static <X> Quintet<X,X,X,X,X> fromIterable(final Iterable<X> iterable, int index) {
+        return fromIterable(iterable, index, false);
+    }
+
+    
+    
+
+    private static <X> Quintet<X,X,X,X,X> fromIterable(final Iterable<X> iterable, int index, final boolean exactSize) {
         
         if (iterable == null) {
             throw new IllegalArgumentException("Iterable cannot be null");
@@ -122,6 +146,16 @@ public final class Quintet<A,B,C,D,E>
         X element4 = null;
         
         final Iterator<X> iter = iterable.iterator();
+        
+        int i = 0;
+        while (i < index) {
+            if (iter.hasNext()) {
+                iter.next();
+            } else {
+                tooFewElements = true;
+            }
+            i++;
+        }
         
         if (iter.hasNext()) {
             element0 = iter.next();
@@ -153,8 +187,12 @@ public final class Quintet<A,B,C,D,E>
             tooFewElements = true;
         }
         
-        if (iter.hasNext() || tooFewElements) {
-            throw new IllegalArgumentException("Iterable must have exactly 5 elements in order to create a Quintet.");
+        if (tooFewElements && exactSize) {
+            throw new IllegalArgumentException("Not enough elements for creating a Quintet (5 needed)");
+        }
+        
+        if (iter.hasNext() && exactSize) {
+            throw new IllegalArgumentException("Iterable must have exactly 5 available elements in order to create a Quintet.");
         }
         
         return new Quintet<X,X,X,X,X>(
@@ -171,7 +209,7 @@ public final class Quintet<A,B,C,D,E>
             final C value2,
             final D value3,
             final E value4) {
-        super(SIZE, value0, value1, value2, value3, value4);
+        super(value0, value1, value2, value3, value4);
         this.val0 = value0;
         this.val1 = value1;
         this.val2 = value2;

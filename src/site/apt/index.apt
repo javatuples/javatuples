@@ -2,10 +2,10 @@
   Main
   -------
 
-  <<javatuples 1.1 RELEASED!>> (November 24th, 2010). <<{{{./download.html}[DOWNLOAD]}}>>
+  <<javatuples 1.2 RELEASED!>> (October 15th, 2011). <<{{{./download.html}[DOWNLOAD]}}>>
   
-  javatuples 1.1 is a maintenance release, adding some utility interfaces useful for using the
-  library in some specific environments. No new features have been added.
+  javatuples 1.2 is an evolutive release, adding new static methods for obtaining
+  tuples from iterables, even if these hold more elements than needed by the new tuple.
 
 javatuples
 

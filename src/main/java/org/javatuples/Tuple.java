@@ -47,8 +47,21 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
     
     
 
+    /**
+     * 
+     * @deprecated Will be removed in 1.4. The "size" parameter is of no use at
+     *             this level, so use the simpler Tuple(values) constructor instead.
+     */
+    @Deprecated
+    protected Tuple(@SuppressWarnings("unused") final int size, final Object... values) {
+        super();
+        this.valueArray = values;
+        this.valueList = Arrays.asList(values);
+    }
+
+
     
-    protected Tuple(final int size, final Object... values) {
+    protected Tuple(final Object... values) {
         super();
         this.valueArray = values;
         this.valueList = Arrays.asList(values);

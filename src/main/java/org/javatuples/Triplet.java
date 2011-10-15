@@ -90,6 +90,7 @@ public final class Triplet<A,B,C>
         return fromIterable(collection);
     }
 
+
     
     /**
      * <p>
@@ -101,6 +102,29 @@ public final class Triplet<A,B,C>
      * @return the tuple
      */
     public static <X> Triplet<X,X,X> fromIterable(final Iterable<X> iterable) {
+        return fromIterable(iterable, 0, true);
+    }
+
+    
+    
+    /**
+     * <p>
+     * Create tuple from iterable, starting from the specified index. Iterable
+     * can have more (or less) elements than the tuple to be created.
+     * </p>
+     * 
+     * @param <X> the iterable component type 
+     * @param iterable the iterable to be converted to a tuple
+     * @return the tuple
+     */
+    public static <X> Triplet<X,X,X> fromIterable(final Iterable<X> iterable, int index) {
+        return fromIterable(iterable, index, false);
+    }
+
+    
+
+
+    private static <X> Triplet<X,X,X> fromIterable(final Iterable<X> iterable, int index, final boolean exactSize) {
         
         if (iterable == null) {
             throw new IllegalArgumentException("Iterable cannot be null");
@@ -113,6 +137,16 @@ public final class Triplet<A,B,C>
         X element2 = null;
         
         final Iterator<X> iter = iterable.iterator();
+        
+        int i = 0;
+        while (i < index) {
+            if (iter.hasNext()) {
+                iter.next();
+            } else {
+                tooFewElements = true;
+            }
+            i++;
+        }
         
         if (iter.hasNext()) {
             element0 = iter.next();
@@ -132,8 +166,12 @@ public final class Triplet<A,B,C>
             tooFewElements = true;
         }
         
-        if (iter.hasNext() || tooFewElements) {
-            throw new IllegalArgumentException("Iterable must have exactly 3 elements in order to create a Triplet.");
+        if (tooFewElements && exactSize) {
+            throw new IllegalArgumentException("Not enough elements for creating a Triplet (3 needed)");
+        }
+        
+        if (iter.hasNext() && exactSize) {
+            throw new IllegalArgumentException("Iterable must have exactly 3 available elements in order to create a Triplet.");
         }
         
         return new Triplet<X,X,X>(element0, element1, element2);
@@ -149,7 +187,7 @@ public final class Triplet<A,B,C>
             final A value0,
             final B value1,
             final C value2) {
-        super(SIZE, value0, value1, value2);
+        super(value0, value1, value2);
         this.val0 = value0;
         this.val1 = value1;
         this.val2 = value2;
