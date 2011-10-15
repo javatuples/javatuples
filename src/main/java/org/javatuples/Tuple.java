@@ -38,7 +38,7 @@ import java.util.List;
  * @author Daniel Fern&aacute;ndez
  *
  */
-public abstract class Tuple implements Iterable<Object>, Serializable {
+public abstract class Tuple implements Iterable<Object>, Serializable, Comparable<Tuple> {
 
     private static final long serialVersionUID = 5431085632328343101L;
     
@@ -225,7 +225,32 @@ public abstract class Tuple implements Iterable<Object>, Serializable {
         final Tuple other = (Tuple) obj;
         return this.valueList.equals(other.valueList);
     }
+
+
+
     
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    public int compareTo(final Tuple o) {
+        
+        final int tLen = this.valueArray.length;
+        final Object[] oValues = o.valueArray;
+        final int oLen = oValues.length;
+        
+        for (int i = 0; i < tLen && i < oLen; i++) {
+            
+            final Comparable tElement = (Comparable)this.valueArray[i];
+            final Comparable oElement = (Comparable)oValues[i];
+            
+            final int comparison = tElement.compareTo(oElement);
+            if (comparison != 0) {
+                return comparison;
+            }
+            
+        }
+        
+        return (Integer.valueOf(tLen)).compareTo(Integer.valueOf(oLen));
+        
+    }
     
     
     

@@ -22,6 +22,7 @@ package org.javatuples;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import junit.framework.TestCase;
@@ -138,6 +139,37 @@ public class Test extends TestCase {
             throw e;
         }
         
+        
+        
+        final List<Tuple> tuples = new ArrayList<Tuple>();
+        tuples.add(Quintet.with(0, 87, 21, 2, 2));
+        tuples.add(Quintet.with(0, 1, 1, 4, 1));
+        tuples.add(Quintet.with(0, 1, 1, 4, 0));
+        tuples.add(Quintet.with(0, 1, 1, 4, 2));
+        tuples.add(Quintet.with(24, 12, 99, 0, 14));
+        tuples.add(Quintet.with(24, 12, 84, 4, 2));
+        tuples.add(Quartet.with(24, 12, 84, 4));
+        tuples.add(Quartet.with(24, 12, 84, 3));
+        tuples.add(Quartet.with(24, 12, 84, 0));
+        tuples.add(Quartet.with(25, 2, 84, 0));
+        tuples.add(Quartet.with(22, 12, 84, 9));
+        tuples.add(Sextet.with(0, 0, 0, 0, 0, 0));
+        tuples.add(Sextet.with(0, 0, 0, 2, 0, 0));
+        tuples.add(Sextet.with(0, 87, 21, 2, 1, 0));
+        
+        System.out.println("-");
+        for (final Tuple tuple : tuples) {
+            System.out.println(tuple);
+        }
+        Collections.sort(tuples);
+        System.out.println("-");
+        for (final Tuple tuple : tuples) {
+            System.out.println(tuple);
+        }
+        System.out.println("-");
+        
     }
     
+    
+
 }

@@ -4,8 +4,9 @@
 
   <<javatuples 1.2 RELEASED!>> (October 15th, 2011). <<{{{./download.html}[DOWNLOAD]}}>>
   
-  javatuples 1.2 is an evolutive release, adding new static methods for obtaining
-  tuples from iterables, even if these hold more elements than needed by the new tuple.
+  javatuples 1.2 is an evolutive release. Now tuples are comparable --and sortable-- and
+  new static methods have been added for obtaining tuples from iterables, even if these 
+  iterables hold more elements than needed by the new tuple.
 
 javatuples
 
@@ -80,6 +81,8 @@ javatuples
     * Iterable
     
     * Serializable
+
+    * Comparable (implements <<<Comparable&lt;Tuple&gt;>>>)
     
     * Implementing <<<equals(...)>>> and <<<hashCode()>>>
 
