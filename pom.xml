@@ -44,9 +44,9 @@
   </organization>
   
   <scm>
-    <url>scm:svn:http://java-tuples.svn.sourceforge.net/svnroot/java-tuples/trunk/javatuples</url>
-    <connection>scm:svn:https://java-tuples.svn.sourceforge.net/svnroot/java-tuples/trunk/javatuples</connection>
-    <developerConnection>scm:svn:https://java-tuples.svn.sourceforge.net/svnroot/java-tuples/trunk/javatuples</developerConnection>
+    <url>scm:git:git@github.com:javatuples/javatuples.git</url>
+    <connection>scm:git:git@github.com:javatuples/javatuples.git</connection>
+    <developerConnection>scm:git:git@github.com:javatuples/javatuples.git</developerConnection>
   </scm>
   
   <developers>

@@ -19,16 +19,19 @@ In order to prepare a release, this steps have to be taken:
     </server>
   </servers>
 
-2. Ensure all SVN URLs in pom.xml are using "https". A "502 Bad Gateway" error will be received if not.
+2. Ensure all SCM URLs in pom.xml are pointing to the correct github repos like "git@github.com:[user]/[repo].git"
 
-3. Deploy SNAPSHOT artifact to Sonatype NEXUS with "mvn deploy", and check in Nexus web interface.
+3. Ensure the "dev" branch is totally merged into "master" and pushed to github, and checkout into "master".
 
-4. Execute a test "no modification" run of the release:prepare goal: "mvn -Preleases release:prepare -DdryRun=true -Dusername=[SVNUSER] -Dpassword=[SVNPASS]"
+4. Deploy SNAPSHOT artifact to Sonatype NEXUS with "mvn deploy", and check in Nexus web interface.
 
-5. Execute a real run of the release:prepare goal: "mvn -Preleases release:prepare -Dusername=[SVNUSER] -Dpassword=[SVNPASS]"
+5. Execute a run of the release:prepare goal: "mvn -Preleases release:prepare"
 
-6. Upload the release: "mvn -Preleases release:perform -Dusername=[SVNUSER] -Dpassword=[SVNPASS]"
+6. Upload the release: "mvn -Preleases release:perform"
 
-7. Follow instructions for Nexus at: http://nexus.sonatype.org/oss-repository-hosting.html
+7. Merge "master" into "dev", and push. Checkout into the new version tag and merge it into the -dev branch for
+   the current x.x version (or create this branch).
+
+8. Follow instructions for Nexus at: http://nexus.sonatype.org/oss-repository-hosting.html
 
 
