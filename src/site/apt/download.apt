@@ -8,7 +8,7 @@ Download javatuples
   
   <<Current version>>: 1.2 (released October 15th, 2011)
   
-  <<{{{https://github.com/javatuples/javatuples/downloads}DOWNLOAD JAVATUPLES DISTRIBUTION}}>>
+  <<{{{https://github.com/javatuples/javatuples.github.com/downloads}DOWNLOAD JAVATUPLES DISTRIBUTION}}>>
   
   Nevertheless, if you are using Apache Maven for your projects, you can obtain javatuples
   easily from the Maven central repositories by following these {{{./maveninfo.html}instructions}}.
