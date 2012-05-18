@@ -24,7 +24,6 @@
     <links>
       <item name="Main" href="index.html" />
       <item name="Download" href="download.html" />
-      <item name="User Forum/List" href="userlist.html" />
       <item name="Javadoc" href="apidocs/index.html" />
       <item name="Github Repository" href="http://github.com/javatuples/javatuples" />
     </links>
@@ -34,7 +33,6 @@
       <item name="· Download" href="download.html"/>
       <item name="· Maven Info" href="maveninfo.html"/>
       <item name="· Dependencies" href="dependencies.html"/>
-      <item name="· User Forum/List" href="userlist.html"/>
       <item name="· Using javatuples" href="using.html"/>
       <item name="· Github Repository" href="http://github.com/javatuples/javatuples" />
       <item name="· License" href="license.html"/>
