@@ -24,8 +24,7 @@
       <question>Does javatuples offer any type of commercial support?</question>
       <answer>
         <p>
-          No, it does not. Commercial support is not offered at the moment, but
-          there is a <a href="userlist.html">User Forum/List</a> at your disposal.
+          No, it does not. 
         </p>
       </answer>
     </faq>
@@ -37,9 +36,7 @@
           In many ways:
         </p>
         <ul>
-          <li>You can write in the <a href="userlist.html">User 
-              Forum/List</a> (or directly to the <a href="team.html">Team</a>) with your
-              ideas for improving javatuples.</li>
+          <li>You can write to the <a href="team.html">Team</a> with your ideas for improving javatuples.</li>
           <li>You can contribute some code, write a patch for a new feature
               or behaviour (please, tell the project admins first about your idea so 
               that effort can be correctly coordinated).</li> 
