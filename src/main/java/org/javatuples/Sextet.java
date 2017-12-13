@@ -19,6 +19,7 @@
  */
 package org.javatuples;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -65,6 +66,21 @@ public final class Sextet<A,B,C,D,E,F>
         return new Sextet<A,B,C,D,E,F>(value0,value1,value2,value3,value4,value5);
     }
 
+    /**
+    *  Empty constructor to satisfy Jackson
+    *  Serialization / Deserialization
+    *  
+    * @since 1.3.1
+    * 
+    */
+    public Sextet() {
+        this.val0 = null;
+        this.val1 = null;
+        this.val2 = null;
+        this.val3 = null;
+        this.val4 = null;
+        this.val5 = null;
+    }
     
     /**
      * <p>
