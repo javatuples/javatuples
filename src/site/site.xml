@@ -5,7 +5,7 @@
   <bannerLeft>
     <name>javatuples</name>
     <src>images/javatuples_logo.png</src>
-    <href>http://www.javatuples.org/</href>
+    <href>https://www.javatuples.org/</href>
   </bannerLeft>
   
   <skin>
@@ -25,7 +25,7 @@
       <item name="Main" href="index.html" />
       <item name="Download" href="download.html" />
       <item name="Javadoc" href="apidocs/index.html" />
-      <item name="Github Repository" href="http://github.com/javatuples/javatuples" />
+      <item name="Github Repository" href="https://github.com/javatuples/javatuples" />
     </links>
 
     <menu name="The javatuples Project">
@@ -34,7 +34,7 @@
       <item name="· Maven Info" href="maveninfo.html"/>
       <item name="· Dependencies" href="dependencies.html"/>
       <item name="· Using javatuples" href="using.html"/>
-      <item name="· Github Repository" href="http://github.com/javatuples/javatuples" />
+      <item name="· Github Repository" href="https://github.com/javatuples/javatuples" />
       <item name="· License" href="license.html"/>
       <item name="· Team" href="team.html"/>
       <item name="· Javadoc" href="apidocs/index.html"/>
@@ -43,19 +43,6 @@
 
 
     <head>
-        <script type="text/javascript">
-        
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-1276954-8']);
-          _gaq.push(['_trackPageview']);
-        
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        
-        </script>
     </head>
 
   </body>
@@ -63,7 +50,7 @@
 
 
   <poweredBy>   
-       <logo name="Built with Maven 2" href="http://maven.apache.org" img="http://maven.apache.org/images/logos/maven-feather.png" />    
+       <logo name="Built with Maven 2" href="https://maven.apache.org" img="https://maven.apache.org/images/logos/maven-feather.png" />
   </poweredBy>    
   
   
