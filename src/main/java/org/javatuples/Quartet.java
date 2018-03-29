@@ -19,6 +19,7 @@
  */
 package org.javatuples;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -59,6 +60,19 @@ public final class Quartet<A,B,C,D>
         return new Quartet<A,B,C,D>(value0,value1,value2,value3);
     }
 
+    /**
+    *  Empty constructor to satisfy Jackson
+    *  Serialization / Deserialization
+    *  
+    * @since 1.3.1
+    * 
+    */
+    public Quartet() {
+        this.val0 = null;
+        this.val1 = null;
+        this.val2 = null;
+        this.val3 = null;
+    }
     
     /**
      * <p>

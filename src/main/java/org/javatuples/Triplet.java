@@ -19,6 +19,7 @@
  */
 package org.javatuples;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -54,6 +55,19 @@ public final class Triplet<A,B,C>
     
     public static <A,B,C> Triplet<A,B,C> with(final A value0, final B value1, final C value2) {
         return new Triplet<A,B,C>(value0,value1,value2);
+    }
+    
+    /**
+    *  Empty constructor to satisfy Jackson
+    *  Serialization / Deserialization
+    *  
+    * @since 1.3.1
+    * 
+    */
+    public Triplet() {
+        this.val0 = null;
+        this.val1 = null;
+        this.val2 = null;
     }
 
     

@@ -19,6 +19,7 @@
  */
 package org.javatuples;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -51,6 +52,17 @@ public final class Pair<A,B>
     
     public static <A,B> Pair<A,B> with(final A value0, final B value1) {
         return new Pair<A,B>(value0,value1);
+    }
+    /**
+    *  Empty constructor to satisfy Jackson
+    *  Serialization / Deserialization
+    *  
+    * @since 1.3.1
+    * 
+    */
+    public Pair() {
+        this.val0 = null;
+        this.val1 = null;
     }
 
     
@@ -112,6 +124,7 @@ public final class Pair<A,B>
      * 
      * @param <X> the iterable component type 
      * @param iterable the iterable to be converted to a tuple
+     * @param index
      * @return the tuple
      */
     public static <X> Pair<X,X> fromIterable(final Iterable<X> iterable, int index) {
