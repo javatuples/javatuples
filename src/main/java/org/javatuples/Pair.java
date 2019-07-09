@@ -191,6 +191,9 @@ public final class Pair<A,B>
         return this.val1;
     }
 
+    public A getKey() { return getValue0(); }
+
+    public B getValue() { return getValue1(); }
 
     @Override
     public int getSize() {

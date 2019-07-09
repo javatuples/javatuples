@@ -99,6 +99,8 @@ public class Test extends TestCase {
         assertTrue(pair.containsAll(o));
         assertTrue(pair.containsAll(null,"a"));
         assertTrue(!pair.containsAll(null,"b"));
+        assertEquals("a", pair.getKey());
+        assertEquals(null, pair.getValue());
         
         final byte[] serSextet = SerializationUtils.serialize(sextet);
         System.out.println(Arrays.asList(ArrayUtils.toObject(serSextet)));
