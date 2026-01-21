@@ -19,6 +19,7 @@
  */
 package org.javatuples;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -54,6 +55,17 @@ public final class KeyValue<A,B>
         return new KeyValue<A,B>(key,value);
     }
 
+    /**
+    *  Empty constructor to satisfy Jackson 
+    *  Serialization / Deserialization
+    *  
+    * @since 1.3.1
+    * 
+    */
+    public KeyValue() {
+        this.key = null;
+        this.value = null;        
+    }
     
     /**
      * <p>

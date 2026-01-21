@@ -19,6 +19,7 @@
  */
 package org.javatuples;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -119,12 +120,18 @@ public final class Unit<A>
      */
     public static <X> Unit<X> fromIterable(final Iterable<X> iterable, int index) {
         return fromIterable(iterable, index, false);
+    }  
+    /**
+    *  Empty constructor to satisfy Jackson
+    *  Serialization / Deserialization
+    *  
+    * @since 1.3.1
+    * 
+    */
+    public Unit() {
+        this.val0 = null;
+        
     }
-    
-
-    
-
-
     private static <X> Unit<X> fromIterable(final Iterable<X> iterable, int index, final boolean exactSize) {
         
         if (iterable == null) {

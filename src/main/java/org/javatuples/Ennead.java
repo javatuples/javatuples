@@ -19,6 +19,7 @@
  */
 package org.javatuples;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -74,6 +75,24 @@ public final class Ennead<A,B,C,D,E,F,G,H,I>
         return new Ennead<A,B,C,D,E,F,G,H,I>(value0,value1,value2,value3,value4,value5,value6,value7,value8);
     }
 
+    /**
+    *  Empty constructor to satisfy Jackson
+    *  Serialization / Deserialization
+    *  
+    * @since 1.3.1
+    * 
+    */
+    public Ennead() {
+        this.val0 = null;
+        this.val1 = null;
+        this.val2 = null;
+        this.val3 = null;
+        this.val4 = null;
+        this.val5 = null;
+        this.val6 = null;
+        this.val7 = null;
+        this.val8 = null;
+    }
     
     /**
      * <p>

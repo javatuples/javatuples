@@ -19,6 +19,7 @@
  */
 package org.javatuples;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -54,6 +55,17 @@ public final class LabelValue<A,B>
         return new LabelValue<A,B>(label,value);
     }
 
+    /**
+    *  Empty constructor to satisfy Jackson 
+    *  Serialization / Deserialization
+    *  
+    * @since 1.3.1
+    * 
+    */
+    public LabelValue() {
+        this.label = null;
+        this.value = null;        
+    }
     
     /**
      * <p>
